@@ -1,12 +1,22 @@
-import React from 'react'
+import React from "react";
 
-const ItemList = () => {
+import Item from "./Item";
+import { Container, Row } from "react-bootstrap";
+
+const ItemList = ({ listProducts }) => {
+  console.log(listProducts);
+
   return (
-    <>
-    <h1>Lista de Productos</h1>
-    </>  
-  )
-}
+    <div>
+      <Container className="container ">
+        <Row style={{ justifyContent: "center" }}>
+          {listProducts.map((item, i) => (
+            <Item key={`${item.name}-${i}`} item={item} />
+          ))}
+        </Row>
+      </Container>
+    </div>
+  );
+};
 
 export default ItemList;
-
