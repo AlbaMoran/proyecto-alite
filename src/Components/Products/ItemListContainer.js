@@ -3,6 +3,7 @@ import swal from "sweetalert";
 import ItemList from "./ItemList";
 import products from "../../assets/database/products";
 import { customFetch } from "../../utilities/customFetch";
+import { Container } from "react-bootstrap"
 
 function ItemListContainer() {
   const [listProducts, setListProduct] = useState([]);
@@ -32,7 +33,8 @@ function ItemListContainer() {
   };
 
   return (
-    <>
+    <Container fluid>
+      <div className="container-fluid my-2 ">
       <ItemList listProducts={listProducts} />
       <div style={{ display: status }}>
         <div className="d-flex justify-content-center">
@@ -41,7 +43,8 @@ function ItemListContainer() {
           </div>
         </div>
       </div>
-    </>
+    </div>
+    </Container >
   );
 }
 

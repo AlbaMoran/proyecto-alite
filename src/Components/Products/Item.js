@@ -18,10 +18,10 @@ const Item = ({ item }) => {
   return (
     <>
       <Card
-        className=" Container
+        className=" 
         justifyContent-center
         text-center 
-        card p-1 
+        p-1 
         bg-light 
         bg-opacity-10 
         border 
@@ -46,8 +46,8 @@ const Item = ({ item }) => {
           <hr />
 
           <div
-            className="card-body bg-dark bg-opacity-10  border border-warning border-top-0 border-end-0 border-start-0 p-1"
-            style={{ justifyContent: "space-around" }}
+            className="card-body bg-dark bg-opacity-10  border border-info border-top-0 border-end-0 border-start-0 p-1"
+            style={{ justifyContent: "space-evenly" }}
           >
             <h5 className="card-title text-center ">
               <b>{item.name}</b>

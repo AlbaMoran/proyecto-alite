@@ -3,6 +3,9 @@ import './App.css';
 import Header from './Components/Header';
 import ItemListContainer from './Components/Products/ItemListContainer';
 import ItemList from './Components/Products/ItemList';
+import Login from './Components/LoginComponents/Login';
+import SignUp from './Components/LoginComponents/SignUp';
+import { UserAuthContextProvider } from './Components/context/UserAuthContext';
 
 
 
@@ -13,13 +16,19 @@ return(
 
 
     <Header />
-    <ItemListContainer greeting= " Este espacio será destinado a la tienda de productos"/> 
-    <Routes>
-        <Route path="/itemList" element={<ItemList/>}/>
+    <UserAuthContextProvider>
+        <Routes>
+            <Route path="/" element={<ItemListContainer/>}/>
+        
+            <Route path="/tienda" element={<ItemListContainer/>}/>
+        
+            <Route path="/login" element={<Login/>}/>
 
-    </Routes>
-    
+            <Route path="/itemList" element={<itemList/>}/>
 
+            <Route path="/registrarse" element={<SignUp/>}/>
+        </Routes>   
+    </UserAuthContextProvider>     
 </>
 
 )}

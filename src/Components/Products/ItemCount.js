@@ -15,10 +15,9 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
   
 
 
-
   return (
     <>
-      <div className="container"  style={{userSelect: "none", justifyContent:"center", alignItems: "center"   }}>
+      <div className="continer"  style={{userSelect: "none", justifyContent:"center", alignItems: "center"   }}>
 
    
         <Card.Body >
