@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { Form, Button, Alert, Card } from "react-bootstrap";
 import { useState } from "react";
 import { useUserAuth } from "../context/UserAuthContext";
@@ -7,14 +7,16 @@ import Login from "./Login";
 const SignUp = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-  const { signUp } = useUserAuth();
   const [error, setError] = useState(" ");
+  const { signUp } = useUserAuth();
+  const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError(" ");
     try {
       await signUp(email, password);
+      navigate('/home')
     } catch (error) {
       setError(error.message);
     }
@@ -47,7 +49,7 @@ const SignUp = () => {
               </Form.Group>
 
               <div className="d-grid gap-2">
-                <Button type="submit" value="Crear cuenta" variant="info" />
+                <Button type="submit"  variant="info"> Crear cuenta </Button>
               </div>
             </Form>
           </div>

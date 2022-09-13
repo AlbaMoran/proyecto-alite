@@ -1,8 +1,8 @@
 
-import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
+import { Container, Nav, Navbar } from 'react-bootstrap'
 import Logo from '../assets/images/Logos/AliteTr540x540.png'; 
 import CartWidget from './CartWidget';
-import './Header.css' 
+import './Styles/Header.css' 
 import { Link } from 'react-router-dom'
 
 
@@ -24,16 +24,16 @@ function Header(){
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
                   <Navbar.Text  >
-                     <Link to="/" className="links" > Home</Link>
+                     <Link to="/home" className="hdLinks" > Home</Link>
                   </Navbar.Text>
                   <Navbar.Text  >
-                      <Link to="#link" className="links">Blog</Link>
+                      <Link to="/blog" className="hdLinks">Blog</Link>
                   </Navbar.Text>
                   <Navbar.Text >
-                     <Link to="/tienda" className="links" >Tienda</Link>
+                     <Link to="/tienda" className="hdLinks" >Tienda</Link>
                   </Navbar.Text>
                   <Navbar.Text  >
-                      <Link to="/itemList" className="links"> Productos</Link>
+                      <Link to="/itemList" className="hdLinks"> Productos</Link>
                  </Navbar.Text>
           </Nav>
 
@@ -42,18 +42,9 @@ function Header(){
             <CartWidget />
           </Nav.Link>
             <Navbar.Text>
-              <Link to="/login" className="links"> <b>Ingresar</b>  </Link>
+              <Link to="/login" className="hdLinks"> <b>Ingresar</b>  </Link>
            </Navbar.Text>
-            {/* <NavDropdown title="Ingresar"  id="basic-nav-dropdown" >
-              <NavDropdown.Item ><Link to="#" style={styles.userOption}> Usuario registrado</Link></NavDropdown.Item>
-         
-              <NavDropdown.Divider />
-             
-              <NavDropdown.Item href="#action/3.4">
-                  <Link to="#" style={styles.userOption}> Crear Cuenta</Link> 
-              </NavDropdown.Item>
-            </NavDropdown> */}
-          </Nav>  
+           </Nav>  
         </Navbar.Collapse>
       </Container>
     </Navbar>
