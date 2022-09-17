@@ -1,7 +1,8 @@
 import React from "react";
 import ItemCount from "./ItemCount";
-import { Accordion, Card } from "react-bootstrap";
+import { Accordion, Card   } from "react-bootstrap";
 import swal from "sweetalert";
+import { Link } from 'react-router-dom';
 
 //import '../../assets/styles/App.css'
 
@@ -60,6 +61,10 @@ const Item = ({ item }) => {
             <h5 className="card-text"> ${item.price}</h5>
             <h6 className="card-text"> {`Stock: ${item.stock} unidades`}</h6>
 
+           
+                <Link to={`/item/${item.id}`} >Ver detalles</Link>
+         
+                   
             <ItemCount stock={item.stock} initial="1" onAdd={onAdd} />
           </div>
         </Card.Body>
@@ -71,11 +76,13 @@ const Item = ({ item }) => {
         </Card.Body>
         <Card.Body>
           <Accordion defaultActiveKey="1" style={{ borderColor: "lavender" }}>
+           
             <Accordion.Item
               eventKey="0"
               style={{ backgroundColor: "lavender" }}
             >
-              <Accordion.Header>Ver más detalles</Accordion.Header>
+
+              <Accordion.Header>Ingredientes</Accordion.Header>
               <Accordion.Body>{item.detail}</Accordion.Body>
             </Accordion.Item>
           </Accordion>

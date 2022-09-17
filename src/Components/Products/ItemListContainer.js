@@ -13,14 +13,14 @@ function ItemListContainer() {
       .then((data) => {
         setListProduct(data);
         setStatus(`none`);
-        console.log(data);
+        // console.log(data);
       })
       .catch((err) => {
         alert(err);
       });
   }, []);
 
-  console.log(listProducts);
+  // console.log(listProducts);
 
   const onAdd = () => {
     swal({
@@ -35,10 +35,11 @@ function ItemListContainer() {
     <>
       <ItemList listProducts={listProducts} />
       <div style={{ display: status }}>
-        <div className="d-flex justify-content-center">
+        <div className="d-flex justify-content-center my-2">
           <div className="spinner-border" role="status">
-            <span className="visually-hidden"> Loading...</span>
+            <span className="visually-hidden"> </span>
           </div>
+            <span> Cargando ...</span>
         </div>
       </div>
     </>
