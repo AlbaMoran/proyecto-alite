@@ -2,25 +2,23 @@ import {Routes, Route} from 'react-router';
 import './App.css';
 import Header from './Components/Header';
 import ItemListContainer from './Components/Products/ItemListContainer';
-import ItemList from './Components/Products/ItemList';
-
+//import ItemList from './Components/Products/ItemList';
+import ItemDetailContainer from './Components/Products/ItemDetailContainer';
 
 
 
 const App= ()=> {
 return(
-<>
-
-
-    <Header />
-    <ItemListContainer greeting= " Este espacio será destinado a la tienda de productos"/> 
-    <Routes>
-        <Route path="/itemList" element={<ItemList/>}/>
-
-    </Routes>
-    
-
-</>
+        <>
+        <Header />
+       
+        <Routes>
+            <Route path="/" element={ <ItemListContainer /> }/>
+            <Route exact path="/products" element={<ItemListContainer/>}/>
+            <Route exact path="/item/:id" element={<ItemDetailContainer/> }/>
+        </Routes>
+        
+        </>
 
 )}
 
