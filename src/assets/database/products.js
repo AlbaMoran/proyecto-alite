@@ -21,7 +21,7 @@ const products = [
     'otherImages':[collection, stack],
     'temperature': 'Temperatura ideal del agua 75%',
     'Presentation':'caja por 50grs. con filtro individual para taza',
-    'category': 'Variedades',
+    'categoryName': 'Colecciones',
     'stock': 15
   },
 
@@ -37,11 +37,11 @@ const products = [
     'otherImages': [ collection, stack],
     'temperature': 'Temperatura ideal del agua 80%',
     'Presentation':'caja por 50grs. con filtro individual para taza',
-    'category': 'Variedades',
+    'categoryName': 'Variedades',
     'stock': 10
   },
   {
-    'id': 5,
+    'id': 3,
     'name' : 'WISDOM',
     'price': '1.000,00', 
     'detail':' Té rojo, cascarillas de algarroba, arándanos,rosa mosqueta, un toque de pimienta roja, espíritu de cognac',
@@ -52,7 +52,7 @@ const products = [
     'otherImages': [ collection, stack],
     'temperature': 'Temperatura ideal del agua 87%',
     'Presentation':'caja por 50grs. con filtro individual para taza',
-    'category': 'Variedades',
+    'categoryName': 'Variedades',
     'stock': 5
     },
     
@@ -68,12 +68,12 @@ const products = [
     'otherImages': [ collection, stack],
     'temperature': 'Temperatura ideal del agua 80%',
     'Presentation':'caja por 50grs. con filtro individual para taza',
-    'category': 'Variedades',
+    'categoryName': 'Colecciones',
     'stock': 5
     },
   
     {
-      'id': 3,
+      'id': 5,
       'name' : 'SWIRLS' ,
       'price': '1.600,00', 
       'detail':'Té Rojo, Mango y frutillas,Láminas de coco, Flores de hibisco (O ROSA DE JAMAICA) y aciano. Un toque de lemon grass y un leve picor y frescura aportados por el jengibre',
@@ -84,7 +84,7 @@ const products = [
       'otherImages': [ collection, stack],
       'temperature': 'Temperatura ideal del agua 85%',
       'Presentation':'caja por 50grs. con filtro individual para taza',
-      'category': 'Variedades',
+      'categoryName': 'Colecciones',
       'stock': 8
   
       },
@@ -96,11 +96,11 @@ const products = [
       'moment': ' A la tarde. Apta para consumo por niños ya que es una infusión libre de cafeína',
       'image': carrousel,
       'image2':collection,
-    'image3': stack,
+      'image3': stack,
       'otherImages': [ collection, stack],
       'temperature': 'Temperatura ideal del agua 100%',
       'Presentation':'caja por 50grs. con filtro individual para taza',
-      'category': 'Variedades',
+      'categoryName': 'Boxes',
       'stock': 6
       },
   ]

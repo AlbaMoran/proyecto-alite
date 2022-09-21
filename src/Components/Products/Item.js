@@ -45,11 +45,13 @@ const Item = ({ item }) => {
             style={{ width: "80%", userSelect: "none" }}
           />
           <hr />
+          <h6 className="card-text">{item.categoryName}</h6>
 
           <div
             className="card-body bg-dark bg-opacity-10  border border-warning border-top-0 border-end-0 border-start-0 p-1"
             style={{ justifyContent: "space-around" }}
           >
+           
             <h5 className="card-title text-center ">
               <b>{item.name}</b>
             </h5>
@@ -58,6 +60,7 @@ const Item = ({ item }) => {
             className="card-body "
             style={{ justifyContent: "space-around" }}
           >
+            
             <h5 className="card-text"> ${item.price}</h5>
             <h6 className="card-text"> {`Stock: ${item.stock} unidades`}</h6>
 
