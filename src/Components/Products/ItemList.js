@@ -1,9 +1,8 @@
 import React from "react";
-
 import Item from "./Item";
 import { Container, Row } from "react-bootstrap";
 
-const ItemList = ({ listProducts }) => {
+const ItemList = ({ listProducts  }) => {
   // console.log(listProducts);
 
   return (
@@ -11,7 +10,9 @@ const ItemList = ({ listProducts }) => {
       <Container className="container ">
         <Row style={{ justifyContent: "center" }}>
           {listProducts.map((item, i) => (
+          
             <Item key={`${item.name}-${i}`} item={item} />
+           
           ))}
         </Row>
       </Container>

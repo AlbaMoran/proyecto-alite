@@ -31,8 +31,6 @@ const ItemDetailContainer = () => {
     console.log("Itemmm desde IDC ", item)
 
   
-
-
   return (
     <>
    {
