@@ -3,10 +3,14 @@ import ItemCount from "./ItemCount";
 import { Accordion, Card   } from "react-bootstrap";
 import swal from "sweetalert";
 import { Link } from 'react-router-dom';
+import "../../Components/styleSheets/Item.css";
+import { useState } from "react";
 
 //import '../../assets/styles/App.css'
 
 const Item = ({ item }) => {
+  const [add, setAdd] = useState(false)
+
   const onAdd = () => {
     swal({
       title: `Se agregó correctamente al carrito`,
@@ -14,15 +18,16 @@ const Item = ({ item }) => {
       button: "Aceptar",
       timmer: "2000",
     });
+    setAdd(!add);
   };
 
   return (
     <>
       <Card
-        className=" Container
+        className=" 
         justifyContent-center
         text-center 
-        card p-1 
+        Card p-1 
         bg-light 
         bg-opacity-10 
         border 
@@ -32,7 +37,7 @@ const Item = ({ item }) => {
         shadow p-3 
         mb-5 
         bg-body rounded
-        col-xs-12 col-sm-4 col-md-4  
+        col-lg-4 col-md-4 col-sm-6 col-xs-12
         my-2 mx-2 auto "
         style={{ userSelect: "none" }}
         key={item.id}
@@ -44,15 +49,13 @@ const Item = ({ item }) => {
             alt={item.name}
             style={{ width: "80%", userSelect: "none" }}
           />
-          <hr />
           <h6 className="card-text">{item.categoryName}</h6>
-
           <div
             className="card-body bg-dark bg-opacity-10  border border-warning border-top-0 border-end-0 border-start-0 p-1"
             style={{ justifyContent: "space-around" }}
           >
            
-            <h5 className="card-title text-center ">
+            <h5 className=" text-center ">
               <b>{item.name}</b>
             </h5>
           </div>
@@ -68,7 +71,15 @@ const Item = ({ item }) => {
                 <Link to={`/item/${item.id}`} >Ver detalles</Link>
          
                    
-            <ItemCount stock={item.stock} initial="1" onAdd={onAdd} />
+                { add 
+                  ? 
+                <div> <h6> <b>¡Añadido!</b></h6>
+                 <Link to="/cart" className="btn btn-primary" >Terminar compra  </Link></div>
+                  :
+                  <ItemCount stock={item.stock} initial="1" onAdd={onAdd} />
+                  
+                  }
+
           </div>
         </Card.Body>
         <Card.Body>

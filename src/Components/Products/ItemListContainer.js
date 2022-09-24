@@ -27,9 +27,7 @@ function ItemListContainer( { categoryName } ) {
     const productsByCategory = async () => {
       try {
        const fetch = await customFetch(products)
-       
        const response= fetch.filter(product => product.categoryName === categoryName)
-
        setListProduct(response)
        setStatus(true);
        
@@ -56,8 +54,8 @@ function ItemListContainer( { categoryName } ) {
      ?
       <ItemList listProducts={listProducts}  />
      :
-      <div >
-        <div className="d-flex justify-content-center my-2">
+      <div  >
+        <div className="d-flex justify-content-center my-2 ">
           <div className="spinner-border" role="status">
             <span className="visually-hidden"> </span>
           </div>
