@@ -17,3 +17,13 @@
 width: calc(((100%+1 em)/2)-1em) 
 
 }
+
+.details{
+        text-decoration: none;
+        color: cadetblue;
+        
+}
+.details:hover{
+        color: rgb(66, 187, 193);
+        
+}
