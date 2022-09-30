@@ -18,7 +18,7 @@ return(
             <Route exact path="/products" element={<Home /> }/>
             <Route exact path="/item/:id" element={<ItemDetailContainer/> }/>
             <Route exact path="/category/:categoryName" element={<Category/>}/>
-            <Route path="/cart/" element={<Cart/>}/>
+            <Route path="/cart" element={<Cart/>}/>
         </Routes>
         </CartContext>
       

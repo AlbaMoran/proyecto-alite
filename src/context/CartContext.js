@@ -18,6 +18,7 @@ import { useState } from 'react'
   
     
     const addProduct = (item, quantity)=> {
+        
         if(isInCart(item.id)){
         setCart(cart.map (product =>{
             return product.id === item.id ? { ...product, quantity: product.quantity+ quantity } : product}
@@ -25,7 +26,7 @@ import { useState } from 'react'
         } else {
             setCart([...cart, {...item, quantity: quantity}])
         }}
-    console.log(cart, 'carrito');
+    
  
   
 
