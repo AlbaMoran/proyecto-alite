@@ -32,3 +32,14 @@
 
 }
 #id-Img:hover { transform: scale(1.04) }
+
+.item-detail-container {
+    margin-top: 50px;
+
+}
+.item-detail-container img {
+   max-height: 500px;
+   max-width: 70%;
+   align-items: center;
+
+}

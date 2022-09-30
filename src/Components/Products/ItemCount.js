@@ -5,17 +5,21 @@ import ButtonGroup from "react-bootstrap/ButtonGroup";
 
 
 
-export const ItemCount = ({ stock, initial, onAdd }) => {
+export const ItemCount = ({item, stock, initial, onAdd }) => {
+
+
   const [count, setCount] = useState(0);
-
-  const addItem = () =>  ( count < stock) &&  setCount(count + 1);
+  const addItemCart = () =>  ( count < stock) &&  setCount(count + 1);
   const subtractItem = () => ( count > initial) &&   setCount(count - 1);
-  const addCart = () => (count > 0) && onAdd({ text: count });
-
   
-
-
-
+  const addCart = () => {
+    if(count > 0){
+      
+      onAdd( count)
+      setCount(1)
+    } ;
+  }
+  
   return (
     <>
       <div className="container"  style={{userSelect: "none", justifyContent:"center", alignItems: "center"   }}>
@@ -29,17 +33,14 @@ export const ItemCount = ({ stock, initial, onAdd }) => {
                   -
                 </Button>
                 <Button variant="secondary"> {count} </Button>
-                <Button variant="secondary"  disabled ={ count === stock} onClick={addItem}>
+                <Button variant="secondary"  disabled ={ count === stock} onClick={addItemCart}>
                   +
                 </Button>
               </ButtonGroup>
             </ListGroup.Item>
             <ListGroup.Item>
-              <Button
-                variant="outline-success outline-warning"
-                onClick={addCart}
-              >
-                Agregar {count} a Carrito
+              <Button variant="outline-success outline-warning" onClick={addCart}>
+                Agregar a Carrito
               </Button>
             </ListGroup.Item>
           </ListGroup>

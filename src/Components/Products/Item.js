@@ -5,6 +5,7 @@ import swal from "sweetalert";
 import { Link } from 'react-router-dom';
 import "../../Components/styleSheets/Item.css";
 import { useState } from "react";
+import '../styleSheets/Item.css'
 
 //import '../../assets/styles/App.css'
 
@@ -67,10 +68,10 @@ const Item = ({ item }) => {
             <h5 className="card-text"> ${item.price}</h5>
             <h6 className="card-text"> {`Stock: ${item.stock} unidades`}</h6>
 
-           
-                <Link to={`/item/${item.id}`} >Ver detalles</Link>
-         
-                   
+           <h3>
+                <Link to={`/item/${item.id}`}  className="details"> <b >Ver Detalles</b></Link>
+           </h3>
+{/*                    
                 { add 
                   ? 
                 <div> <h6> <b>¡Añadido!</b></h6>
@@ -78,7 +79,7 @@ const Item = ({ item }) => {
                   :
                   <ItemCount stock={item.stock} initial="1" onAdd={onAdd} />
                   
-                  }
+                  } */}
 
           </div>
         </Card.Body>
