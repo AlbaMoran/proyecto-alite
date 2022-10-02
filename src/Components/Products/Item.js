@@ -1,5 +1,5 @@
 import React from "react";
-import ItemCount from "./ItemCount";
+//import ItemCount from "./ItemCount";
 import { Accordion, Card   } from "react-bootstrap";
 import swal from "sweetalert";
 import { Link } from 'react-router-dom';
@@ -52,8 +52,8 @@ const Item = ({ item }) => {
           />
           <h6 className="card-text">{item.categoryName}</h6>
           <div
-            className="card-body bg-dark bg-opacity-10  border border-warning border-top-0 border-end-0 border-start-0 p-1"
-            style={{ justifyContent: "space-around" }}
+            className="card-body bg-dark bg-opacity-10  border border-info border-top-0 border-end-0 border-start-0 p-1"
+            style={{ justifyContent: "space-evenly" }}
           >
            
             <h5 className=" text-center ">
