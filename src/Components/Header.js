@@ -50,16 +50,8 @@ function Header(){
 
           <Nav className="justify-content-end">
           <Navbar.Text> <Link to="/cart"> <CartWidget/> </Link>  </Navbar.Text  >
-              
-            <NavDropdown title="Ingresar"  id="basic-nav-dropdown" >
-              <NavDropdown.Item ><Link to="#" className="userOption"> Usuario registrado</Link></NavDropdown.Item>
-         
-              <NavDropdown.Divider />
-             
-              <NavDropdown.Item href="#action/3.4">
-                  <Link to="#" className="userOption"> Crear Cuenta</Link> 
-              </NavDropdown.Item>
-            </NavDropdown>
+          <Navbar.Text> <Link to="/login"  className="userOption"> Ingresar </Link></Navbar.Text>
+                   
           </Nav>  
         </Navbar.Collapse>
       </Container>

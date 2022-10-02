@@ -19,7 +19,7 @@ const Login = () => {
     setError(" ");
     try {
       await logIn(email, password);
-      navigate('/home')
+      navigate('/profile')
     } catch (error) {
       setError(error.message);
     }
@@ -29,7 +29,7 @@ const Login = () => {
     e.preventDefault()
     try {
       await googleSingIn();
-      navigate('/home')
+      navigate('/profile')
       
     } catch (error) {
       setError(error.message)

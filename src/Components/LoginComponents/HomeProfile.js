@@ -2,7 +2,7 @@ import React from 'react'
 import {Button, Card} from 'react-bootstrap'
 import { useUserAuth } from "../context/UserAuthContext";
 
-const Home = () => {
+const HomeProfile = () => {
     const { user, logOut } =  useUserAuth()
     console.log(user)
 
@@ -34,4 +34,4 @@ const Home = () => {
   )
 }
 
-export default Home
+export default HomeProfile
