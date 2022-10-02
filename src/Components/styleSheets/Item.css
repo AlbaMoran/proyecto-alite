@@ -1,0 +1,29 @@
+/* {justifyContent-center
+        text-center 
+        Card p-1 
+        bg-light 
+        bg-opacity-10 
+        border 
+        border-dark 
+        border-opacity-25 
+        rounded-4 
+        shadow p-3 
+        mb-5 
+        bg-body rounded
+        col-lg-4 col-md-4 col-sm-6 col-xs-12
+        my-2 mx-2 auto "} */
+
+.card-Item{
+width: calc(((100%+1 em)/2)-1em) 
+
+}
+
+.details{
+        text-decoration: none;
+        color: cadetblue;
+        
+}
+.details:hover{
+        color: rgb(66, 187, 193);
+        
+}

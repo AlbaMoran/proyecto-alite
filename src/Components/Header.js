@@ -1,9 +1,9 @@
 
-import { Container, Nav, Navbar } from 'react-bootstrap'
+import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
 import Logo from '../assets/images/Logos/AliteTr540x540.png'; 
 import CartWidget from './CartWidget';
-import './Styles/Header.css' 
-import { Link } from 'react-router-dom'
+import './styleSheets/Header.css'
+import { Link, NavLink } from 'react-router-dom'
 
 
 
@@ -22,29 +22,45 @@ function Header(){
         <Navbar.Brand href="/">Alité</Navbar.Brand>
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
-            <Nav className="me-auto">
+            <Nav className="me-auto links">
                   <Navbar.Text  >
-                     <Link to="/home" className="hdLinks" > Home</Link>
+                     <NavLink to="/" className="links"> Home</NavLink>
                   </Navbar.Text>
                   <Navbar.Text  >
-                      <Link to="/blog" className="hdLinks">Blog</Link>
+                      <Link to="/blog" className="links">Blog</Link>
                   </Navbar.Text>
                   <Navbar.Text >
-                     <Link to="/tienda" className="hdLinks" >Tienda</Link>
+                     <Link to="/products" className="links">Tienda</Link>
                   </Navbar.Text>
-                  <Navbar.Text  >
-                      <Link to="/itemList" className="hdLinks"> Productos</Link>
-                 </Navbar.Text>
+                              
+                    <NavDropdown title="Categorias"  id="basic-nav-dropdown" className="links" >
+                        <NavDropdown.Item ><Link to="/category/Variedades" className="userOption"> Variedades</Link></NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item >                      
+                          <Link to="/category/Colecciones" className="userOption"> Colecciones</Link> 
+                        </NavDropdown.Item>
+                        <NavDropdown.Divider />
+                        <NavDropdown.Item >                      
+                          <Link to="/category/Boxes" className="userOption"> Boxes</Link> 
+                        </NavDropdown.Item>
+                    </NavDropdown>
+                
+                
           </Nav>
 
           <Nav className="justify-content-end">
-          <Nav.Link href="#link">
-            <CartWidget />
-          </Nav.Link>
-            <Navbar.Text>
-              <Link to="/login" className="hdLinks"> <b>Ingresar</b>  </Link>
-           </Navbar.Text>
-           </Nav>  
+          <Navbar.Text> <Link to="/cart"> <CartWidget/> </Link>  </Navbar.Text  >
+              
+            <NavDropdown title="Ingresar"  id="basic-nav-dropdown" >
+              <NavDropdown.Item ><Link to="#" className="userOption"> Usuario registrado</Link></NavDropdown.Item>
+         
+              <NavDropdown.Divider />
+             
+              <NavDropdown.Item href="#action/3.4">
+                  <Link to="#" className="userOption"> Crear Cuenta</Link> 
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>  
         </Navbar.Collapse>
       </Container>
     </Navbar>
@@ -52,17 +68,6 @@ function Header(){
 }
 
 
-// const styles={
-//   links: {
-//       textDecoration: "none",
-//       padding: "0 5px"},
-   
-//   userOption: {
-//         padding: "0 5px",
-//         color: "black",
-//         textDecoration: "none"
-//       }}
-       
 
 
 export default Header;
