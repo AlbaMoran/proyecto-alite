@@ -12,8 +12,11 @@ i.itemCart {
     
 }
 .cart-container img{
-    max-height: 300px;
+    max-height: 80px;
     width: 80px; 
     margin: 1rem;
 
+}
+.td img{
+    height: 80px
 }

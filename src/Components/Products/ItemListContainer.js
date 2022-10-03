@@ -1,8 +1,9 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import products from "../../assets/database/products";
-import { customFetch } from "../../utilities/customFetch";
-import { Container } from "react-bootstrap"
+import { getDocs, getFirestore, collection, query, where  } from 'firebase/firestore';
+//import products from "../../assets/database/products";
+//import { customFetch } from "../../utilities/customFetch";
+//import { Container } from "react-bootstrap"
 
 
 
@@ -12,33 +13,34 @@ function ItemListContainer( { categoryName } ) {
   const [status, setStatus] = useState(false)
   
 
-  // useEffect(() => {
-  //   customFetch(products)
-  //     .then((data) => {
-  //       setListProduct(data);
-  //       setStatus(`none`);
-  //       // console.log(data);
-  //     })
-  //     .catch((err) => {
-  //       alert(err);
-  //     });
-  // }, []);
-
   useEffect( () => {
+
+    const queryFb= getFirestore()
+    const queryCollection = collection(queryFb, 'products');
+   
     const productsByCategory = async () => {
-      try {
-       const fetch = await customFetch(products)
-       const response= fetch.filter(product => product.categoryName === categoryName)
-       setListProduct(response)
-       setStatus(true);
-       
-      } 
+        try {
+          const fetch = await  getDocs(queryCollection)
+          const objectCollection = fetch.docs.map(product => ({id: product.id, ...product.data()}))
+          if(categoryName){
+            
+            //const response = query(objectCollection, where('categoryName','==', categoryName))
+              const response= objectCollection.filter(product => product.categoryName === categoryName)
+              setListProduct(response)
+              setStatus(true);
+            
+          } else {
+              
+            setListProduct(fetch.docs.map(product => ({id: product.id, ...product.data()})))
+            setStatus(true);
+          }
+        }
       catch (error) {
         console.error("este es el error", error);
       }
     }
-    productsByCategory()
- 
+     productsByCategory()
+      
   },[categoryName])
 
  

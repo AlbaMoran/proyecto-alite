@@ -2,9 +2,8 @@ import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
 import products from "../../assets/database/products";
-import { customFetch }  from "../../utilities/customFetch"
-
-
+//import { customFetch }  from "../../utilities/customFetch"
+import { getDoc, getFirestore, doc } from 'firebase/firestore';
 
 
 const ItemDetailContainer = () => {
@@ -17,18 +16,20 @@ const ItemDetailContainer = () => {
     console.log("url desde IDC", url )
                 
     useEffect(() => {
-      customFetch(products)
+      const queryFb= getFirestore()
+      const queryDoc = doc(queryFb, 'products', params.id);
+      getDoc(queryDoc)
         
       .then((items) => {
-        console.log(items)
-                const itemid = items.find(item => item.id === Number(params.id)) 
-        setItem(itemid);
+       
+               // const itemid = items.find(item => item.id === Number(params.id)) 
+       console.log(setItem({id: items.id, ...items.data()}));
         setLoading(false);
       
       })
         
     },[params.id])
-    console.log("Itemmm desde IDC ", item)
+    console.log("Item desde ItemDetailContainer", item)
 
   
   return (

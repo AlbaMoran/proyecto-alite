@@ -15,7 +15,7 @@ const ItemDetail = ({ item }) => {
   const onAdd = (quantity) => {
     addProduct(item, quantity);
     swal({
-      title: `Se agregó ${item.quantity} correctamente al carrito`,
+      title: `Se agregó ${quantity} correctamente al carrito`,
       icon: "success",
       button: "Aceptar",
       timmer: "2000",
@@ -53,7 +53,7 @@ const ItemDetail = ({ item }) => {
         <Col sm={6}> 
               <h3>{item.name}</h3>
               
-              <h6><b>Ingredientes</b></h6>
+              <h6><b>Ingredientes:</b></h6>
               <p> {item.detail}</p>
               <p>{item.description}</p>
           
@@ -61,7 +61,13 @@ const ItemDetail = ({ item }) => {
               <b>Momento del dia recomendado:</b>
           </h6>
           <p className="context">{item.moment}</p> 
+          <h6>
+              <b>Grado de infusión:</b>
+          </h6>
           <p className="item-info">{item.temperature}</p>
+          <h6>
+              <b>Presetnación:</b>
+          </h6>
           <p className="item-info">{item.presentation}</p>
        
 
@@ -79,11 +85,11 @@ const ItemDetail = ({ item }) => {
                   ? 
                   <Col >
                     <Row>
-                    <h6> <b>¡Añadido!</b></h6>
+                    <h6> <b>¡Añadido al carrito!</b></h6>
                     </Row>
                     <Row className="buy-button">
                       <Link to="/cart" >
-                        <Button  variant="dark"  size="lg" > Finalizar compra </Button>
+                        <Button  variant="success"  size="lg" > Finalizar compra </Button>
                       </Link>                
                     </Row>
                   </Col>
