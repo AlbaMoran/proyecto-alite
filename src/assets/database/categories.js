@@ -14,11 +14,7 @@ const categories = [
         'categoryName' : 'Boxes',
         'path': '/category/boxes'
     },
-    {
-        'id': 4,
-        'categoryName' : 'Accesorios',
-        'path': '/category/accesorios'
-    }
+    
 ]
 
 export default categories

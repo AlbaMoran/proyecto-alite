@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import { getDocs, getFirestore, collection, query, where  } from 'firebase/firestore';
-//import products from "../../assets/database/products";
-//import { customFetch } from "../../utilities/customFetch";
-//import { Container } from "react-bootstrap"
+import { getDocs, collection, query, where  } from 'firebase/firestore';
+import {db} from '../LoginComponents/Firebase'
 
 
 
@@ -15,8 +13,8 @@ function ItemListContainer( { categoryName } ) {
 
   useEffect( () => {
 
-    const queryFb= getFirestore()
-    const queryCollection = collection(queryFb, 'products');
+    
+    const queryCollection = collection(db, 'products');
    
     const productsByCategory = async () => {
         try {
