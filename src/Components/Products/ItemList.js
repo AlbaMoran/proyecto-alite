@@ -6,9 +6,9 @@ const ItemList = ({ listProducts  }) => {
   // console.log(listProducts);
 
   return (
-    <div>
-      <Container className="container ">
-        <Row style={{ justifyContent: "center" }}>
+    
+      <Container className='' >
+        <Row style={{ justifyContent:'center'}} className="container mx-auto ms-1">
           {listProducts.map((item, i) => (
           
             <Item key={`${item.name}-${i}`} item={item} />
@@ -16,7 +16,7 @@ const ItemList = ({ listProducts  }) => {
           ))}
         </Row>
       </Container>
-    </div>
+   
   );
 };
 

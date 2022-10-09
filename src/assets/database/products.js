@@ -20,7 +20,7 @@ const products = [
     'image3': stack,
     'otherImages':[collection, stack],
     'temperature': 'Temperatura ideal del agua 75%',
-    'Presentation':'caja por 50grs. con filtro individual para taza',
+    'presentation':'caja por 50grs. con filtro individual para taza',
     'categoryName': 'Colecciones',
     'stock': 15
   },
@@ -36,7 +36,7 @@ const products = [
     'image3': stack,
     'otherImages': [ collection, stack],
     'temperature': 'Temperatura ideal del agua 80%',
-    'Presentation':'caja por 50grs. con filtro individual para taza',
+    'presentation':'caja por 50grs. con filtro individual para taza',
     'categoryName': 'Variedades',
     'stock': 10
   },
@@ -51,7 +51,7 @@ const products = [
     'image3': stack,
     'otherImages': [ collection, stack],
     'temperature': 'Temperatura ideal del agua 87%',
-    'Presentation':'caja por 50grs. con filtro individual para taza',
+    'presentation':'caja por 50grs. con filtro individual para taza',
     'categoryName': 'Variedades',
     'stock': 5
     },
@@ -67,7 +67,7 @@ const products = [
     'image3': stack,
     'otherImages': [ collection, stack],
     'temperature': 'Temperatura ideal del agua 80%',
-    'Presentation':'caja por 50grs. con filtro individual para taza',
+    'presentation':'caja por 50grs. con filtro individual para taza',
     'categoryName': 'Colecciones',
     'stock': 5
     },
@@ -83,7 +83,7 @@ const products = [
     'image3': stack,
       'otherImages': [ collection, stack],
       'temperature': 'Temperatura ideal del agua 85%',
-      'Presentation':'caja por 50grs. con filtro individual para taza',
+      'presentation':'caja por 50grs. con filtro individual para taza',
       'categoryName': 'Colecciones',
       'stock': 8
   
@@ -99,7 +99,7 @@ const products = [
       'image3': stack,
       'otherImages': [ collection, stack],
       'temperature': 'Temperatura ideal del agua 100%',
-      'Presentation':'caja por 50grs. con filtro individual para taza',
+      'presentation':'caja por 50grs. con filtro individual para taza',
       'categoryName': 'Boxes',
       'stock': 6
       },

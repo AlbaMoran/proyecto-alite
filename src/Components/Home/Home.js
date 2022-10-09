@@ -6,7 +6,7 @@ import categories from '../../assets/database/categories'
 
 function Home  ( ) {
 
-    console.log(categories)
+   // console.log(categories)
 
     return (
         

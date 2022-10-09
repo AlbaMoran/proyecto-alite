@@ -22,7 +22,7 @@ export const ItemCount = ({item, stock, initial, onAdd }) => {
   
   return (
     <>
-      <div className="container"  style={{userSelect: "none", justifyContent:"center", alignItems: "center"   }}>
+      <div className="continer"  style={{userSelect: "none", justifyContent:"center", alignItems: "center"   }}>
 
    
         <Card.Body >
@@ -39,7 +39,7 @@ export const ItemCount = ({item, stock, initial, onAdd }) => {
               </ButtonGroup>
             </ListGroup.Item>
             <ListGroup.Item>
-              <Button variant="outline-success outline-warning" onClick={addCart}>
+              <Button variant="success " onClick={addCart}>
                 Agregar a Carrito
               </Button>
             </ListGroup.Item>

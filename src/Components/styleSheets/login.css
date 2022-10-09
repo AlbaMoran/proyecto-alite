@@ -1,0 +1,33 @@
+/*** Auth proces  **/
+
+.box {
+    margin: 110px auto;
+    border: 1px solid #EEDBAE;
+    border-radius: 15px;
+    max-width: 700px !important;
+    justify-content: center;
+    text-align: center;
+}
+
+.btn {  
+    font-size: 15px !important;
+    color: white !important;
+}
+
+.g-btn { 
+    border-radius: 7px;
+    width: 100% !important;
+    align-items: center;
+    text-align: center;
+    margin: 0
+}
+
+.avatar {
+    border-radius: 50%;
+    max-width: 70px;
+    border: solid 3px #03242F;
+    padding: 3px;
+    margin: 5px; 
+}
+
+/*** END Auth proces  **/

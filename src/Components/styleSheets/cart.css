@@ -1,0 +1,33 @@
+.cart-container {
+    margin-top: 90px;
+    margin-bottom: 110px;
+}
+
+i.itemCart {
+    display: flex;
+    border-bottom: 1px solid gray;
+    max-width: 500px;
+    margin: 1rem auto;
+}
+
+.itemCart img {
+    max-height: 300px;
+    width: 80px; 
+    margin: 1rem;
+    
+}
+.cart-container img{
+    max-height: 80px;
+    width: 80px; 
+    margin: 5px;
+
+}
+.td img{
+    height: 80px
+}
+
+.table{
+    display: block !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+  }

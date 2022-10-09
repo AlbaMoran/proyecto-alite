@@ -1,0 +1,39 @@
+/*** Footer **/
+
+.mainPageContainer {
+    padding-bottom: 150px;
+    text-align: justify;
+    padding-top: 80px;
+ }
+
+
+.NavColorFooter{
+   margin-top: 5px;
+    background-color:#c1e9e2;
+    align-items: flex-start;
+    font-weight: bold;
+    display: flex;
+    flex-wrap: wrap;
+ }
+.NavColorFooter :hover {
+    color: rgb(66, 187, 193);
+
+} 
+ 
+.links {
+        color: black;
+        text-decoration: none;
+        padding: 0 5px
+       }
+       
+.links :hover{
+color: rgb(66, 187, 193);
+}       
+     
+.userOption {
+          padding: 0 5px;
+          color: black;
+          text-decoration: none
+       }
+       
+/*** END Footer **/

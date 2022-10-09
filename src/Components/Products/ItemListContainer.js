@@ -1,7 +1,8 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
-import products from "../../assets/database/products";
-import { customFetch } from "../../utilities/customFetch";
+import { getDocs, collection   } from 'firebase/firestore';
+//import { query, where  } from 'firebase/firestore';
+import { db } from '../LoginComponents/Firebase'
 
 
 
@@ -11,39 +12,45 @@ function ItemListContainer( { categoryName } ) {
   const [status, setStatus] = useState(false)
   
 
-  // useEffect(() => {
-  //   customFetch(products)
-  //     .then((data) => {
-  //       setListProduct(data);
-  //       setStatus(`none`);
-  //       // console.log(data);
-  //     })
-  //     .catch((err) => {
-  //       alert(err);
-  //     });
-  // }, []);
-
   useEffect( () => {
+
+    
+    const queryCollection = collection(db, 'products');
+   
     const productsByCategory = async () => {
-      try {
-       const fetch = await customFetch(products)
-       const response= fetch.filter(product => product.categoryName === categoryName)
-       setListProduct(response)
-       setStatus(true);
-       
-      } 
+        try {
+          const fetch = await  getDocs(queryCollection)
+          const objectCollection = fetch.docs.map(product => ({id: product.id, ...product.data()}))
+          
+          if(categoryName){
+           
+           // const response = query(objectCollection, where('categoryName','==', categoryName))
+              const response= objectCollection.filter(product => product.categoryName === categoryName)
+              setListProduct(response)
+              setStatus(true);
+            
+          } else {
+              
+            setListProduct(fetch.docs.map(product => ({id: product.id, ...product.data()})))
+            
+          }
+        }
       catch (error) {
         console.error("este es el error", error);
       }
+      finally{
+        setStatus(true);
+      }
     }
-    productsByCategory()
- 
+     productsByCategory()
+      
   },[categoryName])
 
  
 
   return (
-    <>
+
+    <div className="itemlistcontainer">
    { listProducts.length >0 ?
      <h3 >  {categoryName} </h3>
      : null}
@@ -52,7 +59,9 @@ function ItemListContainer( { categoryName } ) {
 {
      status 
      ?
+    <div>
       <ItemList listProducts={listProducts}  />
+    </div>
      :
       <div  >
         <div className="d-flex justify-content-center my-2 ">
@@ -62,7 +71,7 @@ function ItemListContainer( { categoryName } ) {
             <span> Cargando ...</span>
         </div>
       </div>}
-    </>
+    </div>
   );
 }
 

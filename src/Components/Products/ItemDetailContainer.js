@@ -1,34 +1,32 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
-import products from "../../assets/database/products";
-import { customFetch }  from "../../utilities/customFetch"
-
-
+import {db} from "../LoginComponents/Firebase";
+import { getDoc,  doc } from 'firebase/firestore';
 
 
 const ItemDetailContainer = () => {
 
     const [item, setItem] = useState([]);
     const [loading, setLoading] = useState(true);
-    const url = products
+   
     const params = useParams();
-    console.log(params);
-    console.log("url desde IDC", url )
+    
                 
     useEffect(() => {
-      customFetch(products)
+      
+      const queryDoc = doc(db, 'products', params.id);
+      getDoc(queryDoc)
         
       .then((items) => {
-        console.log(items)
-                const itemid = items.find(item => item.id === Number(params.id)) 
-        setItem(itemid);
+                    
+       console.log(setItem({id: items.id, ...items.data()}));
         setLoading(false);
       
       })
         
     },[params.id])
-    console.log("Itemmm desde IDC ", item)
+  //  console.log("Item desde ItemDetailContainer", item)
 
   
   return (
