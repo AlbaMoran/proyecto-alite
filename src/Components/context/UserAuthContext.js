@@ -31,7 +31,10 @@ export function UserAuthContextProvider({ children }){
         const googleAuthProvider = new GoogleAuthProvider();
         return signInWithPopup(auth, googleAuthProvider)
     }
-   
+    function passwordReset (email) {
+        console.log('Email', email);
+        return sendPasswordResetEmail(auth, email);
+    }
 
 
 
@@ -50,7 +53,7 @@ export function UserAuthContextProvider({ children }){
 
 
     return (
-        <userAuthContext.Provider value={{user, signUp, logIn, logOut, googleSingIn}}>
+        <userAuthContext.Provider value={{user, signUp, logIn, logOut, googleSingIn, passwordReset}}>
             {children}
         </userAuthContext.Provider>
     )

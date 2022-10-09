@@ -14,6 +14,7 @@ import CartContext from './context/CartContext'
 import Footer from './Components/Footer/Footer'
 import TermsAndConditions from './Components/TermsAndConditions/TermsAndConditions'
 import Blog from './Components/Blog/Blog'
+import ForgotPassword from './Components/LoginComponents/ForgotPassword'
 
 
 
@@ -34,6 +35,7 @@ return(
             <Route exact path="/category/:categoryName" element={<Category/>}/>
      
             <Route exact path="/login" element={<Login/>}/>
+            <Route exact path="/reestablecerpassword" element={<ForgotPassword/>}/>
             <Route exact path="/profile" element={<ProtectedRoute> <HomeProfile/> </ProtectedRoute>}/>
             <Route exact path="/registrarse" element={<SignUp/>}/>
             <Route exact path="/terminos_y_condiciones" element={<TermsAndConditions/>}/>

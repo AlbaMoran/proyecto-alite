@@ -16,7 +16,7 @@ function Header(){
 
       
 
-    <Navbar  variant="lighter" expand="lg" className="NavColor" >
+    <Navbar  variant="lighter" expand="lg" className="NavColor" fixed='top'>
       
       <Container>
         <img src ={ Logo } className= "navbar-brand"alt="logo" width ="50" />

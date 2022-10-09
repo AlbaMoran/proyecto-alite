@@ -1,7 +1,7 @@
 import {useState} from "react"
 import { Link, useNavigate } from "react-router-dom";
 import SignUp from "./SignUp";
-import { Card, Button, Form, Alert } from "react-bootstrap";
+import { Card, Button, Form, Alert} from "react-bootstrap";
 import GoogleButton from "react-google-button";
 import { useUserAuth } from "../context/UserAuthContext";
 import '../styleSheets/login.css'
@@ -40,11 +40,16 @@ const Login = () => {
   return (
     <>
 
+                            
+
+
       <Card  className="box ">
         <Card.Body>
           <div className="p-4 ">
             <h2 className="mb-3"> Login de cuenta  </h2>
-            
+           <hr/>
+            {error && <Alert variant="danger">{error}</Alert>}
+           
 
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -65,12 +70,15 @@ const Login = () => {
                 <GoogleButton className="g-btn " onClick={handleGoogleSignIn} />
               </Form.Group>
               <hr/>
-              {  error && <Alert variant="danger" >{error}</Alert> }
+              
                
           
             </Form>
           </div>
          
+          <div className="p-2 text-center">
+                      ¿Olvidaste tu contraseña? <Link to="/reestablecerPassword">Restablecer.</Link>
+                    </div>
           <h4>
             {" "}
             ¿No tienes cuenta?{" "}
@@ -83,9 +91,7 @@ const Login = () => {
         </Card.Body>
       </Card>
      
-        <Card.Body>
-          
-        </Card.Body>
+        
      
     </>
   );

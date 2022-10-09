@@ -18,9 +18,9 @@ const HomeProfile = () => {
 
   return (
     <>
-    <Card style={{ with: "18rem" }} className="container mt-5">
+    <Card style={{ with: "18rem" }} className="box mt-5">
         <Card.Body>
-    <div className="p-4 box mt-3 text-center"> Hola usuario <br/>
+    <div className="p-4  mt-3 text-center"> Hola usuario <br/>
      {user && user.displayName}  </div>
     <div className="d-grid pag-2"> 
     <Button variant='primary' onClick={handleLogOut}> Cerrar sesión </Button>
