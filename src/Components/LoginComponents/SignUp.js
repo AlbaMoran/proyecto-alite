@@ -24,9 +24,8 @@ const SignUp = () => {
 
   return (
     <>
-      <Card style={{ with: "18rem" }} className="container mt-5">
-        <Card.Body>
-          <div className="p-4 box">
+      <Card style={{ with: "18rem" }} className="container box mt-5">
+        
             <h2 className="mb-3"> Registrar nueva cuenta </h2>
             {error && <Alert variant="danger">{error} </Alert>}
 
@@ -49,24 +48,24 @@ const SignUp = () => {
               </Form.Group>
 
               <div className="d-grid gap-2">
-                <Button type="submit"  variant="info"> Crear cuenta </Button>
+              <Button className= "btn btn-dark-info" type="submit" value="Ingresar" > Crear cuenta</Button>
               </div>
             </Form>
-          </div>
-        </Card.Body>
-      </Card>
-      <Card style={{ with: "18rem" }} className="container mt-5">
-        <Card.Body>
-          <h2>
+        
+          <h4>
             {" "}
             ¿Ya tienes cuenta?{" "}
             <Link to="/login" element={<Login />} className="links">
               {" "}
               Ingresar
             </Link>
-          </h2>
-        </Card.Body>
+          </h4>
+          
+        
       </Card>
+      
+       
+     
     </>
   );
 };

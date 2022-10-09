@@ -26,7 +26,7 @@ const ItemDetailContainer = () => {
       })
         
     },[params.id])
-    console.log("Item desde ItemDetailContainer", item)
+  //  console.log("Item desde ItemDetailContainer", item)
 
   
   return (

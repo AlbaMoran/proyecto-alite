@@ -1,3 +1,8 @@
+.cart-container {
+    margin-top: 90px;
+    margin-bottom: 110px;
+}
+
 i.itemCart {
     display: flex;
     border-bottom: 1px solid gray;
@@ -14,9 +19,15 @@ i.itemCart {
 .cart-container img{
     max-height: 80px;
     width: 80px; 
-    margin: 1rem;
+    margin: 5px;
 
 }
 .td img{
     height: 80px
 }
+
+.table{
+    display: block !important;
+    overflow-x: auto !important;
+    width: 100% !important;
+  }

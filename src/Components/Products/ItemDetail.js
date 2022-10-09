@@ -89,7 +89,7 @@ const ItemDetail = ({ item }) => {
                     </Row>
                     <Row className="buy-button">
                       <Link to="/cart" >
-                        <Button  variant="success"  size="lg" > Finalizar compra </Button>
+                        <Button  variant="success" size="lg" > Finalizar compra </Button>
                       </Link>                
                     </Row>
                   </Col>

@@ -1,6 +1,6 @@
 import { initializeApp } from "firebase/app";
 import { getAuth } from "firebase/auth";
-import { getFirestore} from 'firebase/firestore';
+import { getFirestore, getDoc, updateDoc, doc} from 'firebase/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyAIfqu6I1Aqeq3J6jrtM0po_SCFTrGwx4o",
@@ -15,4 +15,12 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth= getAuth(app);
+
+// Manejar stock --> plus
+export const updateStock = async (id, quantity) => {
+	const item = await getDoc(doc(db, "products", id))
+	await updateDoc(doc(db, "products", id), {
+		stock: item.data().stock - quantity,
+	})
+}
 export default app;

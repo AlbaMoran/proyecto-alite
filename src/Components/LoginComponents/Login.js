@@ -3,8 +3,8 @@ import { Link, useNavigate } from "react-router-dom";
 import SignUp from "./SignUp";
 import { Card, Button, Form, Alert } from "react-bootstrap";
 import GoogleButton from "react-google-button";
-import GoogleLogo from '../../assets/images/Logos/Google.png'
 import { useUserAuth } from "../context/UserAuthContext";
+import '../styleSheets/login.css'
 
 
 const Login = () => {
@@ -39,12 +39,12 @@ const Login = () => {
 
   return (
     <>
-      <Card style={{ with: "18rem" }} className="container mt-5">
-        <Card.Body>
-          <div className="p-4 box">
-            <h2 className="mb-3"> Login de cuenta </h2>
-            {error && <Alert variant="danger">{error}</Alert>}
 
+      <Card  className="box ">
+        <Card.Body>
+          <div className="p-4 ">
+            <h2 className="mb-3"> Login de cuenta  </h2>
+            
 
             <Form onSubmit={handleSubmit}>
               <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -58,31 +58,35 @@ const Login = () => {
               </Form.Group>
 
               <Form.Group className="mb-3" controlId="formBasicPassword">
-                <Button type="submit" value="Ingresar" variant="info light"> Ingresar</Button>
+                <Button className= "btn btn-dark-info" type="submit" value="Ingresar" > Ingresar</Button>
               </Form.Group>
               
               <Form.Group className="mb-3 " controlId="formBasicPassword">
-                <GoogleButton className="g-btn" type="dark" onClick={handleGoogleSignIn} />
-                        
+                <GoogleButton className="g-btn " onClick={handleGoogleSignIn} />
               </Form.Group>
+              <hr/>
+              {  error && <Alert variant="danger" >{error}</Alert> }
                
           
             </Form>
           </div>
-        </Card.Body>
-      </Card>
-      <Card style={{ with: "18rem" }} className="container mt-5">
-        <Card.Body>
-          <h3>
+         
+          <h4>
             {" "}
             ¿No tienes cuenta?{" "}
             <Link to="/registrarse" element={<SignUp />} className="links">
               {" "}
               Registrarse
             </Link>
-          </h3>
+          </h4>
+          
         </Card.Body>
       </Card>
+     
+        <Card.Body>
+          
+        </Card.Body>
+     
     </>
   );
 };

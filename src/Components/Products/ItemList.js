@@ -7,8 +7,8 @@ const ItemList = ({ listProducts  }) => {
 
   return (
     
-      <Container >
-        <Row style={{ justifyContent: "space-around" }} className="container-fluid">
+      <Container className='' >
+        <Row style={{ justifyContent:'center'}} className="container mx-auto ms-1">
           {listProducts.map((item, i) => (
           
             <Item key={`${item.name}-${i}`} item={item} />

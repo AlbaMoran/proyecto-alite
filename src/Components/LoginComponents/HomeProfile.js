@@ -21,7 +21,7 @@ const HomeProfile = () => {
     <Card style={{ with: "18rem" }} className="container mt-5">
         <Card.Body>
     <div className="p-4 box mt-3 text-center"> Hola usuario <br/>
-     {user && user.email}  </div>
+     {user && user.displayName}  </div>
     <div className="d-grid pag-2"> 
     <Button variant='primary' onClick={handleLogOut}> Cerrar sesión </Button>
     </div>

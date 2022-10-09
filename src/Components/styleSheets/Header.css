@@ -4,8 +4,12 @@
 
 .links {
        text-decoration: none;
-       padding: 0 5px
+       padding: 0 5px;
+       margin-left: 10px;
       }
+.links :hover{
+   color: rgb(66, 187, 193);
+}
     
 .userOption {
          padding: 0 5px;
