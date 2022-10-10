@@ -16,6 +16,7 @@ const Cart = ({ nameId }) => {
     const [buyer, setBuyer] = useState({ name: '', email: '', phone: '' })
 
     const [orderStatus, setOrderStatus] = useState(false)
+    const [orderId, setOrderId] = useState("");
 
 
     const order = {
@@ -41,13 +42,9 @@ const Cart = ({ nameId }) => {
 
         if (order.name !== "" && order.phone !== "" && order.email !== "") {
             clickPurchase(order)
-                .then((res) => {
-                    new swal({
-                        title: "Orden creada con Exito!",
-                        text: `N° de orden: ${res.id}`,
-                        icon: "success",
-                        button: "Ok",
-                    })
+            .then((res) => {
+                    setOrderId(res.id)
+                    
                 })
                 .then(() => cart.forEach((item) => updateStock(item.id, item.quantity)))
                 .then(() => clearCart())
@@ -73,23 +70,51 @@ const Cart = ({ nameId }) => {
     const startPurchase = () => {
         setOrderStatus(!orderStatus)
     }
-
+console.log(orderId)
     return (
         <>
             {
                 cart.length === 0
                     ?
+                    
+                        (orderId) ? (
+                            <>
+                            <Container className="order-successs-container">
+                              <h4> La orden se registró con el id {orderId} y se envió correctamente</h4>
+                              
+                              <Link to={`/order/${orderId}`}>
+                                    <Button variant="dark" size="md" className="m-2">
+                                      {" "}
+                                      Ver detalle
+                                    </Button>
+                              </Link>
+                              <Link to="/">
+                                    <Button variant="dark" size="md"  className="m-2">
+                                      {" "}
+                                      Seguir comprando
+                                    </Button>
+                              </Link>
+                          </Container>
+                          </>
 
-                    <Container className="cart-container ">
-                        <Row>
-                            <Col>
-                                <h3> No hay productos aún.</h3>
-                                <Link to="/">
-                                    <Button variant="secondary" size="md"> Ir a Tienda</Button>
-                                </Link>
-                            </Col>
-                        </Row>
-                    </Container>
+                            )
+                            :
+                            (
+
+                                <Container className="cart-container ">
+                                    <Row>
+                                        <Col>
+                                            <h3> No hay productos aún.</h3>
+                                            <Link to="/">
+                                                <Button variant="secondary" size="md"> Ir a Tienda</Button>
+                                            </Link>
+                                        </Col>
+                                    </Row>
+                                </Container>
+
+                            )
+                    
+
 
                     :
                     <>
