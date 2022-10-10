@@ -10,6 +10,7 @@ import ItemDetailContainer from './Components/Products/ItemDetailContainer';
 import Category from './Components/Products/Category'
 import Home from './Components/Home/Home'
 import Cart from './Components/Cart/Cart'
+import OrderDetail from './Components/Cart/OrderDetail'
 import CartContext from './context/CartContext'
 import Footer from './Components/Footer/Footer'
 import TermsAndConditions from './Components/TermsAndConditions/TermsAndConditions'
@@ -31,6 +32,7 @@ return(
             <Route exact path="/products" element={<Home /> }/>
             <Route exact path="/blog" element={<Blog /> }/>
             <Route exact path="/cart" element={<Cart/>}/>
+            <Route exact path="/order/:id" element={<OrderDetail/>}/>
             <Route exact path="/item/:id" element={<ItemDetailContainer/> }/>
             <Route exact path="/category/:categoryName" element={<Category/>}/>
      

@@ -3,6 +3,7 @@ import { Form, Button, Alert, Card } from "react-bootstrap";
 import { useState } from "react";
 import { useUserAuth } from "../context/UserAuthContext";
 import Login from "./Login";
+import '../styleSheets/signUp.css'
 
 const SignUp = () => {
   const [email, setEmail] = useState("");
@@ -24,7 +25,7 @@ const SignUp = () => {
 
   return (
     <>
-      <Card style={{ with: "18rem" }} className="container box mt-5">
+      <Card className="container box ">
         
             <h2 className="mb-3"> Registrar nueva cuenta </h2>
             {error && <Alert variant="danger">{error} </Alert>}
@@ -51,12 +52,12 @@ const SignUp = () => {
               <Button className= "btn btn-dark-info" type="submit" value="Ingresar" > Crear cuenta</Button>
               </div>
             </Form>
-        
+          <hr/>
           <h4>
-            {" "}
-            ¿Ya tienes cuenta?{" "}
+            
+            ¿Ya tienes cuenta?
             <Link to="/login" element={<Login />} className="links">
-              {" "}
+             
               Ingresar
             </Link>
           </h4>

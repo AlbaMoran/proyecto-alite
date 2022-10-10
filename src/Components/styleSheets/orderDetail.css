@@ -1,0 +1,30 @@
+
+.order-title {
+    padding: 100px 0 0 80px;
+    color: #03242F;
+    background-color: #7FAF9E;
+}
+.order-containter {
+    margin: 10px 0 350px 80px;
+    padding: 5px ;
+    border: solid 1px #7FAF9E;
+
+}
+
+ h3 {
+    padding: 10px 0 0 80px ;
+}
+
+h5 {
+    padding: 10px 0 0 90px !important;
+}
+
+.order-field {
+    color: #03242F;
+    font-weight: bold !important;
+}
+
+.order-successs-container {
+    margin: 80px 0 200px 0;
+
+}
