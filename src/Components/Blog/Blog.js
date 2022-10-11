@@ -10,7 +10,8 @@ function Blog () {
   return (
     <>
       
-      <h2 className='title'>Origen de los Blends de Alité</h2>
+      <h2 className='title'>Historia de los Blends de Alité</h2>
+      <hr/>
       <div className='carrousel'>
         <CarrouselBlog/>
       </div>
@@ -18,6 +19,9 @@ function Blog () {
 
      <span >  Un lugar, aromas e imágenes efímeras, (nos traen/evocan) vívidos recuerdos de momentos que ayer llenaron nuestros sentidos y que hoy encienden nuestros deseos de revivirlos. Eso es la Vida, experiencias variopintas que alimentan nuestro Ser interior y lo empujan a trascender. Y a cada instante tenemos la chance de multiplicar esas experiencias y alimentar la bitácora de nuestro viaje terrenal. Recorremos un sendero de luces y sombras, algunas veces en soledad pero en muchas otras acompañados, en una sinergia constante y enriquecedora. Nos enlazan amores y desamores, alegrías y tristezas, logros y fracasos, las pasiones, los gustos compartidos… Hasta dónde seríamos capaces de llegar, si no fuera por ese devenir natural? ¡Cuánto más ricas son nuestras experiencias cuando nos vinculamos y conectamos  con el mundo que nos rodea! La vida es un regalo maravilloso, en un ciclo incesante, dentro de un Universo donde los límites, las fronteras, son sólo parte de un imaginario colectivo, franqueable con nuestro único deseo y voluntad de liberarnos y vencerlos. Recorramos juntos cada etapa de nuestro ciclo vital, acompañando la experiencia con infusiones especiales y virtuosas, que convidan al mayor disfrute en este recorrido.</span>
 </div>
+<div> <h2 className='title'>Historias y datos curiosos</h2> </div>
+<hr/>
+
 <Container className='' >
         <Row style={{ justifyContent:'center'}} className="container mx-auto ms-1">
 
@@ -25,7 +29,7 @@ function Blog () {
 
 
 <BlogItem 
-name= "Nacimiento"
+name= "Sunrise - (Nacimiento)"
 description='Llegar a la vida luego de un cálido y acogedor letargo dentro de mamá, marca el comienzo de nuestro desafiante transito mundano. Nos da la bienvenida
 el tibio contacto de piel con quien nos llevó y nos esperó. Celebremos Ser!'
 color='Amarillo'
@@ -33,8 +37,8 @@ song= {<p> Quiero que te duermas como un sol,<br/>
 Que se acuesta en un campo de trigo.<br/>
 Tengo aquí en mi pecho un corazón,<br/>
 Igualito al hueco de tu ombligo..-</p>}
-songName= {<b > ( Cancion de cuna – Ciro y los Persas )</b>}
-icon=''
+songName= {<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/L8iZ_hGYHcA" > ( Cancion de cuna – Ciro y los Persas )</a>}
+icon='https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/productsImages%2FAccesorios%2Fgirasol.png?alt=media&token=68c5b9a7-e5b2-4a51-9b7a-1ef9d4fd07c6'
 moment='En el desayuno ya que es una versión del conocido Earl Grey.'
 ingredients='Té Negro Darjeeling, Flores de Aciano (Bulgaria),Escencia natural de Bergamota.'
 inspiration={<p>Se pensó en incluir un té para desayuno , con el agregado de flores
@@ -54,8 +58,8 @@ color='Salmón'
 song= {<p> Estamos invitados a tomar el té <br/>
 La tetera es de porcelana pero no se ve <br/>
 Yo no se por qué…</p>}
-songName= {<a href="https://youtu.be/ZNwVUCZMjrY">(Maria Helena Walsh-Canción de Tomar el té) </a>}
-icon=''
+songName= {<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/ZNwVUCZMjrY">(Maria Helena Walsh-Canción de Tomar el té) </a>}
+icon='https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/productsImages%2FAccesorios%2Fcarrousel.png?alt=media&token=fd22a886-472a-42d1-9ee5-88780dd80750'
 moment='A la tarde. Apta para consumo por niños ya que es una infusión libre de
 cafeína.'
 ingredients='Rooibos combinado con frutas (frambuesa, mango, manzana) y un toque cítrico de naranjas.'
@@ -78,8 +82,8 @@ song= {<p>Y no pierdas tiempo, escucha el viento <br/>
   Canta por lo que vendrá. <br/>
   No es tan difícil que aprendas a volar <br/>
  </p>}
-songName= ' (Aprender a volar, Patricia Sosa)'
-icon=''
+songName= {<a target="_blank" rel="noopener noreferrer" href="https://youtu.be/BKqytXUEH1I"> (Aprender a volar, Patricia Sosa)</a> }
+icon='https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/productsImages%2FAccesorios%2Fauris.png?alt=media&token=6f1041dd-81bf-429a-aa4f-e1aface90ffd'
 moment='En la tarde, caliente o frio'
 ingredients='Té Rojo,Mango y frutillas,Láminas de coco,Flores de hibisco (O ROSA DE JAMAICA) y aciano. Un toque de lemon grass y un leve picor y frescura aportados por el
 jengibre.'
@@ -103,7 +107,7 @@ song= {<p>A veces el miedo te hace dudar<br/>
   No lo dudes, solo abre tus alas<br/>
   Siente el vuelo.. </p>}
 songName= '(La vida es un Valz –Diego Torres)'
-icon=''
+icon='https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/productsImages%2FAccesorios%2FfullnessPeople.png?alt=media&token=c68a6ab3-a3b1-466c-b45f-9ebae97ce327'
 moment='En la mañana aporta energía, luego de la actividad
 física revitaliza.'
 ingredients='Té Verde sencha,Mix especiado (Hinojo, Cardamomo, Anis, Pimienta Roja, Jengibre),Hojas de menta.'
@@ -125,7 +129,7 @@ song= {<p>A mis cuarenta y diez , cuarenta y nueve dicen que aparento
   De empezar a pensar En recogerme, de sentar la cabeza…
  </p>}
 songName= '( A mis cuarenta y Diez- Joaquin Sabina )'
-icon=''
+icon='https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/productsImages%2FAccesorios%2FRootsImg.png?alt=media&token=d338feac-a98a-4af4-ba9e-a56bf32b88b6'
 moment={<p>En la merienda, o luego de la cena.
   ¿Y si hacemos un coctel? Macerar una medida de este blend en gin,
   y preparar el trago con abundante hielo y un toque de jugo de limón,
@@ -154,7 +158,7 @@ song= {<p>Ando despacito porque tuve prisa <br/>
  
  </p>}
 songName= ' (Tocando al Frente-Carlos Mancinelli)'
-icon=''
+icon='https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/productsImages%2FAccesorios%2FwisdomImg.png?alt=media&token=1323d29a-bc2d-4060-862d-a47e8de5dac1'
 moment={<p>Al final de la jornada, para acompañar una lectura, o un momento de relax y
   reflexión.</p>}
 ingredients=' Té rojo,Cascarillas de algarroba, Arándanos, Rosa mosqueta, Toque de pimienta roja, Espíritu de cognac

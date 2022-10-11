@@ -8,6 +8,7 @@ const BlogItem = (props) => {
     return(
     <>
         <Container className="box" style={{width:'25rem'}}>
+        <img src={props.icon} alt={props.icon}/><hr/>
         <p className="title-item"> <b> {props.name }</b> </p>
         <p> {props.description}
         <hr/>
@@ -18,12 +19,9 @@ const BlogItem = (props) => {
         <p> <b> Una cancion:  </b> </p> 
         <p> {props.song}</p>
         <b > {props.songName} </b> </p>
-        
-        <br/>
+                <br/>
         <hr/>
-        <p> <b> Icono:  </b> </p> 
-        <b > {props.icon} </b> 
-            <hr/>
+                 
         <p> <b> Momento del día sugerido::  </b> </p>
         <p> {props.moment} </p>
         <hr/> 
