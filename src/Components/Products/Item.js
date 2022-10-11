@@ -10,7 +10,7 @@ const Item = ({ item }) => {
   
   return (
     <>
-  
+ 
       <Card
         className=" 
         justifyContent-center
@@ -20,7 +20,7 @@ const Item = ({ item }) => {
         rounded-4 
         shadow 
         col-lg-3 col-md-3 col-sm-5 col-xs-12
-        my-2 mx-1 "
+        my-2 mx-2 "
         style={{ userSelect: "none" }}
         key={item.id}
       >
@@ -61,7 +61,7 @@ const Item = ({ item }) => {
 
 
       </Card>
-    
+   
     </>
   );
 };

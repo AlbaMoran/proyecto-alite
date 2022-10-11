@@ -106,7 +106,7 @@ song= {<p>A veces el miedo te hace dudar<br/>
   A pocos segundos antes de saltar<br/>
   No lo dudes, solo abre tus alas<br/>
   Siente el vuelo.. </p>}
-songName= '(La vida es un Valz –Diego Torres)'
+songName= { <a target="_blank" rel="noopener noreferrer" href="https://youtu.be/l2FiJLFI47M"> (La vida es un Valz –Diego Torres)</a>}
 icon='https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/productsImages%2FAccesorios%2FfullnessPeople.png?alt=media&token=c68a6ab3-a3b1-466c-b45f-9ebae97ce327'
 moment='En la mañana aporta energía, luego de la actividad
 física revitaliza.'
@@ -128,7 +128,7 @@ song= {<p>A mis cuarenta y diez , cuarenta y nueve dicen que aparento
   Más antes que después he de enfrentarme al delicado momento
   De empezar a pensar En recogerme, de sentar la cabeza…
  </p>}
-songName= '( A mis cuarenta y Diez- Joaquin Sabina )'
+songName={<a target="_blank" rel="noopener noreferrer" href="https://m.youtube.com/watch?v=24F1M2hBkDM">( A mis cuarenta y Diez- Joaquin Sabina )</a> }
 icon='https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/productsImages%2FAccesorios%2FRootsImg.png?alt=media&token=d338feac-a98a-4af4-ba9e-a56bf32b88b6'
 moment={<p>En la merienda, o luego de la cena.
   ¿Y si hacemos un coctel? Macerar una medida de este blend en gin,
@@ -157,7 +157,7 @@ song= {<p>Ando despacito porque tuve prisa <br/>
   Y llevo la certeza de que muy poco sé, o nada sé.
  
  </p>}
-songName= ' (Tocando al Frente-Carlos Mancinelli)'
+songName= {<a target="_blank" rel="noopener noreferrer" href='https://youtu.be/kP2D-Xy70xA'> (Tocando al Frente-Carlos Mancinelli)</a>}
 icon='https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/productsImages%2FAccesorios%2FwisdomImg.png?alt=media&token=1323d29a-bc2d-4060-862d-a47e8de5dac1'
 moment={<p>Al final de la jornada, para acompañar una lectura, o un momento de relax y
   reflexión.</p>}

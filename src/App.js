@@ -16,7 +16,7 @@ import Footer from './Components/Footer/Footer'
 import TermsAndConditions from './Components/TermsAndConditions/TermsAndConditions'
 import Blog from './Components/Blog/Blog'
 import ForgotPassword from './Components/LoginComponents/ForgotPassword'
-
+import NotFound from './Components/NotFound/NotFound'
 
 
 const App= ()=> {
@@ -41,6 +41,8 @@ return(
             <Route exact path="/profile" element={<ProtectedRoute> <HomeProfile/> </ProtectedRoute>}/>
             <Route exact path="/registrarse" element={<SignUp/>}/>
             <Route exact path="/terminos_y_condiciones" element={<TermsAndConditions/>}/>
+            <Route path="*" element={<NotFound />} /> 
+
            
         </Routes>   
     </UserAuthContextProvider>   
