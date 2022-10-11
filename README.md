@@ -3,6 +3,7 @@
 ## Proyect Name
 
 <b> Alité </b> - Tienda de Té 
+![](https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/Logos%2FAliteTr540x540.png?alt=media&token=885d97c2-b420-4087-b124-de26bfb847bf)
 
 ## Owner
 Alba Morán
@@ -19,8 +20,8 @@ Tea leaves are elaborated by own recipes, blendind different ingredients beyong 
 ## Extra Dependencies
 
 - **React-Bootstrap**: library to get several
-- **Firebase**:  Authentication, Firestore y Storage services used in this project. 
-- **React Router DOM**: Usado para el sistema de navegación entre páginas para que funcione como una SPA.
+- **Firebase**:  Authentication, Firestore Database and Storage services used in this project to manage files and users register and Login with Google button. 
+- **React Router DOM**: used to navigate through internal sites as SPA functionality.
 - **swal**: used for alerts and error messages.
 
 ## Set Up

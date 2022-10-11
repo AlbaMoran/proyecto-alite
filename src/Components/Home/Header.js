@@ -1,6 +1,5 @@
 
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
-import Logo from './../../assets/images/Logos/AliteTr540x540.png' 
 import CartWidget from '../CartWidget';
 import '../styleSheets/Header.css'
 import { Link, NavLink } from 'react-router-dom'
@@ -19,7 +18,7 @@ function Header(){
     <Navbar  variant="lighter" expand="lg" className="NavColor" fixed='top'>
       
       <Container>
-        <img src ={ Logo } className= "navbar-brand" alt="logo" width ="50" />
+        <img src ={ 'https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/Logos%2FAliteTr540x540.png?alt=media&token=885d97c2-b420-4087-b124-de26bfb847bf' } className= "navbar-brand" alt="logo" width ="50" />
         
         <Navbar.Brand href="/" className="links ">Alité - tienda de Té</Navbar.Brand>
         
