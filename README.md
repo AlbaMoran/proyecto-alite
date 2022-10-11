@@ -24,7 +24,7 @@ Tea leaves are elaborated by own recipes, blendind different ingredients beyong 
 - **swal**: used for alerts and error messages.
 
 ## Set Up
-This porject requires  [NodeJS](https://nodejs.org/) to its ejecution.
+This porject requires [NodeJS](https://nodejs.org/) to its ejecution.
 bash console : git clone https://github.com/AlbaMoran/proyecto-alite.git
 npm install
 npm start

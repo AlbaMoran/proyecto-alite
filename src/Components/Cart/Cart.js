@@ -101,7 +101,7 @@ console.log(orderId)
                             :
                             (
 
-                                <Container className="cart-container ">
+                                <Container className="cart-container box ">
                                     <Row>
                                         <Col>
                                             <h3> No hay productos aún.</h3>

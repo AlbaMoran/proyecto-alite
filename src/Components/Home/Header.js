@@ -19,7 +19,7 @@ function Header(){
     <Navbar  variant="lighter" expand="lg" className="NavColor" fixed='top'>
       
       <Container>
-        <img src ={ Logo } className= "navbar-brand"alt="logo" width ="50" />
+        <img src ={ Logo } className= "navbar-brand" alt="logo" width ="50" />
         
         <Navbar.Brand href="/" className="links ">Alité - tienda de Té</Navbar.Brand>
         
