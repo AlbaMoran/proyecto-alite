@@ -3,7 +3,7 @@
 ## Proyect Name
 
 <b> Alité </b> - Tienda de Té 
-![](https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/Logos%2FAliteTr540x540.png?alt=media&token=885d97c2-b420-4087-b124-de26bfb847bf)
+![](https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/Logos%2FAliteLogo.png?alt=media&token=5b1c32d1-9b7f-47a1-9279-99419fe94279)
 
 ## Owner
 Alba Morán
