@@ -1,52 +1,38 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { getDocs, collection   } from 'firebase/firestore';
-//import { query, where  } from 'firebase/firestore';
+import { query, where  } from 'firebase/firestore';
 import { db } from '../LoginComponents/Firebase'
+import { useParams } from 'react-router-dom';
 
 
 
-function ItemListContainer( { categoryName } ) {
+
+function ItemListContainer() {
   
   const [listProducts, setListProduct] = useState([]);
   const [status, setStatus] = useState(false)
+  const {categoryName}= useParams()
   
 
-  useEffect( () => {
+  useEffect(() => {         
+    const queryCollection = collection(db , 'products'); 
 
-    
-    const queryCollection = collection(db, 'products');
-   
-    const productsByCategory = async () => {
-        try {
-          const fetch = await  getDocs(queryCollection)
-          const objectCollection = fetch.docs.map(product => ({id: product.id, ...product.data()}))
-          
-          if(categoryName){
-           
-           // const response = query(objectCollection, where('categoryName','==', categoryName))
-              const response= objectCollection.filter(product => product.categoryName === categoryName)
-              setListProduct(response)
-              setStatus(true);
-            
-          } else {
-              
-            setListProduct(fetch.docs.map(product => ({id: product.id, ...product.data()})))
-            
-          }
-        }
-      catch (error) {
-        console.error("este es el error", error);
-      }
-      finally{
-        setStatus(true);
-      }
+    if (categoryName) {
+
+        const queryByCategory = query(queryCollection, where('categoryName', '==', categoryName )) 
+        getDocs(queryByCategory) 
+        .then(res => setListProduct(res.docs.map(item => ({ id: item.id, ...item.data() }))),
+        setStatus(true))
+
+    } else {
+        getDocs(queryCollection) 
+        .then(res => setListProduct(res.docs.map(item => ({ id: item.id, ...item.data() }))),
+        setStatus(true))  
     }
-     productsByCategory()
-      
-  },[categoryName])
+}, [categoryName, status])
 
- 
+
 
   return (
 

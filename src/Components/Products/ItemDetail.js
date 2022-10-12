@@ -4,7 +4,7 @@ import { Carousel , Container, Row, Col, Button} from 'react-bootstrap';
 import ItemCount from './ItemCount';
 import '../../Components/styleSheets/ItemDetail.css'
 import swal from "sweetalert";
-import { Context } from '../../context/CartContext';
+import { Context } from '../../cartContext/CartContext';
 
 
 const ItemDetail = ({ item }) => {

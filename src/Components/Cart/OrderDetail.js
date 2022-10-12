@@ -5,7 +5,7 @@ import { Container, Row, Col } from 'react-bootstrap';
 import {  doc, getDoc } from 'firebase/firestore';
 import { db } from '../LoginComponents/Firebase';
 import "../styleSheets/orderDetail.css";
-import Logo from './../../assets/images/Logos/AliteTr540x540.png' 
+
 
 const OrderDetail = () =>{
 

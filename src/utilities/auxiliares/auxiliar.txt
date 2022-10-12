@@ -63,6 +63,6 @@
         </Card>
 
 
-
+consulta: como linkeo correctamente a un sitio externo del sitio con React?
 
        

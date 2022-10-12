@@ -1,10 +1,10 @@
 import React, { useState, useContext } from 'react'
 import {Link } from 'react-router-dom'
 import { Card, Carousel } from 'react-bootstrap';
-import ItemCount from '../ItemCount';
+import ItemCount from '../../Components/Products/ItemCount';
 import '../../Components/styleSheets/ItemDetail.css'
 import swal from "sweetalert";
-import { Context } from '../../../context/CartContext';
+import { Context } from '../../cartContext/CartContext';
 
 
 const ItemDetail = ({ item }) => {

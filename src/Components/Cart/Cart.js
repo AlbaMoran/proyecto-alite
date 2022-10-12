@@ -1,5 +1,5 @@
 import React, { useContext, useState } from 'react'
-import { Context } from '../../context/CartContext'
+import { Context } from '../../cartContext/CartContext'
 import { Link } from 'react-router-dom'
 import { Button, Container, Row, Col, Table } from 'react-bootstrap'
 import '../styleSheets/cart.css'
@@ -70,8 +70,7 @@ const Cart = ({ nameId }) => {
     const startPurchase = () => {
         setOrderStatus(!orderStatus)
     }
-console.log(orderId)
-    return (
+   return (
         <>
             {
                 cart.length === 0
