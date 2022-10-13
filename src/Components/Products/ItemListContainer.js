@@ -1,57 +1,44 @@
 import React, { useEffect, useState } from "react";
 import ItemList from "./ItemList";
 import { getDocs, collection   } from 'firebase/firestore';
-//import { query, where  } from 'firebase/firestore';
+import { query, where  } from 'firebase/firestore';
 import { db } from '../LoginComponents/Firebase'
+import { useParams } from 'react-router-dom';
+import '../styleSheets/itemlistcontainer.css'
 
 
 
-function ItemListContainer( { categoryName } ) {
+
+function ItemListContainer() {
   
   const [listProducts, setListProduct] = useState([]);
   const [status, setStatus] = useState(false)
-  
-
-  useEffect( () => {
-
-    
-    const queryCollection = collection(db, 'products');
-   
-    const productsByCategory = async () => {
-        try {
-          const fetch = await  getDocs(queryCollection)
-          const objectCollection = fetch.docs.map(product => ({id: product.id, ...product.data()}))
-          
-          if(categoryName){
-           
-           // const response = query(objectCollection, where('categoryName','==', categoryName))
-              const response= objectCollection.filter(product => product.categoryName === categoryName)
-              setListProduct(response)
-              setStatus(true);
-            
-          } else {
-              
-            setListProduct(fetch.docs.map(product => ({id: product.id, ...product.data()})))
-            
-          }
-        }
-      catch (error) {
-        console.error("este es el error", error);
-      }
-      finally{
-        setStatus(true);
-      }
-    }
-     productsByCategory()
-      
-  },[categoryName])
-
+  const {categoryName}= useParams()
  
+
+  useEffect(() => {         
+    const queryCollection = collection(db , 'products'); 
+
+    if (categoryName) {
+
+        const queryByCategory = query(queryCollection, where('categoryName', '==', categoryName )) 
+        getDocs(queryByCategory) 
+        .then(res => setListProduct(res.docs.map(item => ({ id: item.id, ...item.data() }))),
+        setStatus(true))
+
+    } else {
+        getDocs(queryCollection) 
+        .then(res => setListProduct(res.docs.map(item => ({ id: item.id, ...item.data() }))),
+        setStatus(true))  
+    }
+}, [categoryName, status])
+
+
 
   return (
 
-    <div className="itemlistcontainer">
-   { listProducts.length >0 ?
+    <div className="category-title">
+     { listProducts.length >0 ?
      <h3 >  {categoryName} </h3>
      : null}
 
@@ -60,7 +47,7 @@ function ItemListContainer( { categoryName } ) {
      status 
      ?
     <div>
-      <ItemList listProducts={listProducts}  />
+      <ItemList listProducts={listProducts} />
     </div>
      :
       <div  >

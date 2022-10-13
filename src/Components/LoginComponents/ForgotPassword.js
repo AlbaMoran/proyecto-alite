@@ -29,7 +29,7 @@ const ForgotPassword = () => {
                         onChange={(e) => setEmail(e.target.value)}
                         /> 
                     </FormGroup>
-                    <Button className="btn" variant="dark" type="submit">Restablecer</Button>   
+                    <Button className="btn" variant="primary" type="submit">Restablecer</Button>   
                 </Form>
             <hr/>    
             <Link to="/login" className="text-center">Volver a la página de inicio.</Link>

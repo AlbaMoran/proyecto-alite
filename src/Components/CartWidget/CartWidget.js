@@ -1,7 +1,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import Badge from 'react-bootstrap/Badge';
-import {Context} from '../context/CartContext';
+import {Context} from '../../cartContext/CartContext';
 
 const CartWidget = () => {
 

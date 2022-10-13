@@ -1,6 +1,15 @@
 *{
    user-select: none;
 }
+.background {
+    background-image: url('../../assets/images/Logos/AliteNegro540x540.png');
+    background-repeat: no-repeat;
+    background-size: 15%;
+    background-position: center; 
+    margin-left: 15px;
+
+ }
+
 
 .container-sm {
     text-align: center;
@@ -40,6 +49,20 @@
 .item-detail-container img {
    max-height: 500px;
    max-width: 70%;
-   align-items: center;
+   margin-Bottom: 20px;
+   padding-bottom: 25px;
 
 }
+.box-detail{
+
+        margin: 110px auto;
+        border: 1px solid lightslategray;
+        border-radius: 15px;
+        max-width: 700px !important;
+        justify-content: center;
+        text-align: center;
+        background-color: lavender;
+        padding: 35px;
+    }
+    
+

@@ -31,3 +31,8 @@
 .box {
     background-color: aliceblue !important;
 }
+
+.box-picture{
+    border-radius: 50%;
+    border: 1px solid #EEDBAE;
+}
