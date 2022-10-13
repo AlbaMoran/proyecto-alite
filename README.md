@@ -36,5 +36,3 @@ Tea leaves are elaborated by own recipes, blendind different ingredients beyong 
 You can run this project using the following command: 
   **npm start**
 
-
-
