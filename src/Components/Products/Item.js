@@ -1,27 +1,13 @@
 import React from "react";
-//import ItemCount from "./ItemCount";
 import { Accordion, Card } from "react-bootstrap";
-//import swal from "sweetalert";
 import { Link } from 'react-router-dom';
 import "../../Components/styleSheets/Item.css";
-//import { useState } from "react";
 import '../styleSheets/Item.css'
 
-//import '../../assets/styles/App.css'
+
 
 const Item = ({ item }) => {
-  //const [add, setAdd] = useState(false)
-
-  // const onAdd = () => {
-  //   swal({
-  //     title: `Se agregó correctamente al carrito`,
-  //     icon: "success",
-  //     button: "Aceptar",
-  //     timmer: "2000",
-  //   });
-  //   setAdd(!add);
-  // };
-
+  
   return (
     <>
   
@@ -59,10 +45,10 @@ const Item = ({ item }) => {
         </Card.Body>
        
         <Card.Body>
-          <Accordion defaultActiveKey="1" style={{ borderColor: "lavender" }}>
+          <Accordion defaultActiveKey="1" style={{ borderColor: "cadetblue" }}>
             <Accordion.Item
               eventKey="0"
-              style={{ backgroundColor: "lavender" }} >
+              style={{ backgroundColor: "aliceblue" }} >
               <Accordion.Header>Ingredientes</Accordion.Header>
               <Accordion.Body>{item.detail}</Accordion.Body>
             </Accordion.Item>
