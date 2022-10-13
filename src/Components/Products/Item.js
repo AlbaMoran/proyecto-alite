@@ -7,6 +7,7 @@ import '../styleSheets/Item.css'
 
 
 const Item = ({ item }) => {
+
   
   return (
     <>

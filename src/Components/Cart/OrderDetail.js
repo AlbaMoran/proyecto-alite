@@ -45,7 +45,8 @@ const OrderDetail = () =>{
                 </div>
                 <div className= "order-subtitle">
                     <div> <img src ={ 'https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/Logos%2FAliteTr540x540.png?alt=media&token=885d97c2-b420-4087-b124-de26bfb847bf' } alt="logo"  /> </div>                
-                    <h5><b>¡Recibirás un email con los datos de tu compra!</b></h5>
+                    <h4>¡ Gracias {orderDetail.name} por tu compra!</h4>
+                    <h5><b>Recibirás un email con los datos de tu compra</b></h5>
                 </div>
                 </Container>
 

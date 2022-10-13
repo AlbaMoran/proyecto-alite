@@ -4,7 +4,7 @@ import { useUserAuth } from "../context/UserAuthContext";
 
 const HomeProfile = () => {
     const { user, logOut } =  useUserAuth()
-    console.log(user)
+
 
     
     const handleLogOut = async ()=>{
@@ -18,7 +18,7 @@ const HomeProfile = () => {
 
   return (
     <>
-    <Card style={{ with: "18rem" }} className="box mt-5">
+    <Card style={{ with: "18rem" }} className="box mt-6">
         <Card.Body>
     <div className="p-4  mt-3 text-center"> Hola usuario <br/>
      { user.displayName ? user && user.displayName :user && user.email }

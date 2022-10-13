@@ -1,5 +1,5 @@
 import React, { useState, useContext } from 'react'
-import {Link } from 'react-router-dom'
+import {Link ,} from 'react-router-dom'
 import { Carousel , Container, Row, Col, Button} from 'react-bootstrap';
 import ItemCount from './ItemCount';
 import '../../Components/styleSheets/ItemDetail.css'
@@ -7,7 +7,9 @@ import swal from "sweetalert";
 import { Context } from '../../cartContext/CartContext';
 
 
-const ItemDetail = ({ item }) => {
+
+const ItemDetail = ( {item}  ) => {
+
   const [add, setAdd] = useState(false)
   const { addProduct } = useContext(Context)
   
@@ -26,35 +28,40 @@ const ItemDetail = ({ item }) => {
 
   return (
     <>
-  <Container className="item-detail-container">
+  <Container className="item-detail-container container mx-auto my-6 ">
       <Row>
-        <Col sm={6} className="item-detail-container">
-          <Carousel>
+        <Col sm={6} >
+          <Carousel style={{maxHeight:'300px', justifyContent: 'center', textAlign:'center'}} className='' >
             <Carousel.Item>
-            <img className="d-block w-100"
+            <img className="d-block w-90 box-detail "
               src={item.image} 
-              alt="PM1"
+              alt={item.name}
+              style={{maxHeight: '420px'}}
               />
             </Carousel.Item>
             <Carousel.Item>
-              <img className="d-block w-100 "
+              <img className="d-block w-90 box-detail "
                 src={item.image2} 
-                alt="Second slide"
+                alt={item.name}
               />
             </Carousel.Item>
             <Carousel.Item>
-              <img className="d-block w-100 "
+              <img className="d-block w-90 box-detail "
                 src={item.image3} 
-                alt="Third slide"
+                alt={item.name}
               />
             </Carousel.Item>
-          </Carousel>       
+          </Carousel>    
+       
+
+
         </Col>
-        <Col sm={6}> 
+        <Col sm={6} className='box'> 
               <h3>{item.name}</h3>
-              
               <h6><b>Ingredientes:</b></h6>
               <p> {item.detail}</p>
+              <h6><b>Pertenece a la colección:</b></h6>
+              <p> { item.categoryName  }</p>
               <p>{item.description}</p>
           
           <h6>
@@ -66,7 +73,7 @@ const ItemDetail = ({ item }) => {
           </h6>
           <p className="item-info">{item.temperature}</p>
           <h6>
-              <b>Presetnación:</b>
+              <b>Presentación:</b>
           </h6>
           <p className="item-info">{item.presentation}</p>
        

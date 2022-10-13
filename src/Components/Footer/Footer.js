@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <>
- <Navbar collapseOnSelect expand="lg" bg=" NavColorFooter" fixed='bottom'>
+ <Navbar collapseOnSelect expand="lg" bg=" NavColorFooter" fixed='bottom' className='mt-3'>
       <Container>
         <Navbar.Brand href="/" className="links">Alité - tienda de Té</Navbar.Brand>
         <Navbar.Toggle aria-controls="responsive-navbar-nav" />

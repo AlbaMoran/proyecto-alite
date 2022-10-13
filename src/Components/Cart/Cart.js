@@ -6,7 +6,7 @@ import '../styleSheets/cart.css'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
 import { db, updateStock } from '../LoginComponents/Firebase'
 import swal from "sweetalert";
-import CartWidget from '../CartWidget'
+import CartWidget from '../CartWidget/CartWidget'
 
 
 const Cart = ({ nameId }) => {
@@ -78,7 +78,7 @@ const Cart = ({ nameId }) => {
                     
                         (orderId) ? (
                             <>
-                            <Container className="order-successs-container">
+                            <Container className="order-successs-container box">
                               <h4> La orden se registró con el id {orderId} y se envió correctamente</h4>
                               
                               <Link to={`/order/${orderId}`}>

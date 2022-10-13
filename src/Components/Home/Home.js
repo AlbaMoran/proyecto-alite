@@ -3,20 +3,18 @@ import ItemListContainer from '../Products/ItemListContainer';
 import '../styleSheets/Home.css'
 
 
-
 function Home  ( ) {
 
+
     return (
-        
+       
        <> 
-        <div className="container hm-title">
+        <div className="container home">
         <h2 className="hm-title">Tienda de Productos</h2>  
-            <div>
-               
-                    <ItemListContainer />
-   
-            </div>
-           
+        
+                                     
+                    <ItemListContainer/>
+             
         </div>
         
        </>

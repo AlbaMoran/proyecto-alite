@@ -2,17 +2,18 @@ import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
 import {db} from "../LoginComponents/Firebase";
-import { getDoc,  doc } from 'firebase/firestore';
+import { getDoc,  doc} from 'firebase/firestore';
 
 
-const ItemDetailContainer = () => {
+const ItemDetailContainer = () => { 
+
 
     const [item, setItem] = useState([]);
     const [loading, setLoading] = useState(true);
    
     const params = useParams();
     
-                
+                  
     useEffect(() => {
       
       const queryDoc = doc(db, 'products', params.id);
@@ -20,12 +21,17 @@ const ItemDetailContainer = () => {
         
       .then((items) => {
                     
-       console.log(setItem({id: items.id, ...items.data()}));
-        setLoading(false);
+      setItem({id: items.id,  ...items.data()});
+      setLoading(false);
       
       })
         
     },[params.id])
+    
+
+  
+
+   
   
   return (
     <>
@@ -39,7 +45,7 @@ const ItemDetailContainer = () => {
                 </div>
             </div>
             : 
-             <ItemDetail item={item}/>
+             <ItemDetail item={item} />
             }
     </>
   )

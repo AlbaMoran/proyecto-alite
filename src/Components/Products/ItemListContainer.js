@@ -4,6 +4,7 @@ import { getDocs, collection   } from 'firebase/firestore';
 import { query, where  } from 'firebase/firestore';
 import { db } from '../LoginComponents/Firebase'
 import { useParams } from 'react-router-dom';
+import '../styleSheets/itemlistcontainer.css'
 
 
 
@@ -13,7 +14,7 @@ function ItemListContainer() {
   const [listProducts, setListProduct] = useState([]);
   const [status, setStatus] = useState(false)
   const {categoryName}= useParams()
-  
+ 
 
   useEffect(() => {         
     const queryCollection = collection(db , 'products'); 
@@ -36,8 +37,8 @@ function ItemListContainer() {
 
   return (
 
-    <div className="itemlistcontainer">
-   { listProducts.length >0 ?
+    <div className="category-title">
+     { listProducts.length >0 ?
      <h3 >  {categoryName} </h3>
      : null}
 
@@ -46,7 +47,7 @@ function ItemListContainer() {
      status 
      ?
     <div>
-      <ItemList listProducts={listProducts}  />
+      <ItemList listProducts={listProducts} />
     </div>
      :
       <div  >

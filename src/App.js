@@ -16,7 +16,7 @@ import TermsAndConditions from './Components/TermsAndConditions/TermsAndConditio
 import Blog from './Components/Blog/Blog'
 import ForgotPassword from './Components/LoginComponents/ForgotPassword'
 import NotFound from './Components/NotFound/NotFound'
-import ItemListContainer from './Components/Products/ItemListContainer';
+import Category from './Components/Products/Category';
 
 
 const App= ()=> {
@@ -34,7 +34,7 @@ return(
             <Route exact path="/cart" element={<Cart/>}/>
             <Route exact path="/order/:id" element={<OrderDetail/>}/>
             <Route exact path="/item/:id" element={<ItemDetailContainer/> }/>
-            <Route exact path="/category/:categoryName" element={<ItemListContainer/>}/>
+            <Route exact path="/category/:categoryName" element={<Category/>}/>
      
             <Route exact path="/login" element={<Login/>}/>
             <Route exact path="/reestablecerpassword" element={<ForgotPassword/>}/>

@@ -1,6 +1,6 @@
 
 import { Container, Nav, Navbar, NavDropdown } from 'react-bootstrap'
-import CartWidget from '../CartWidget';
+import CartWidget from '../CartWidget/CartWidget';
 import '../styleSheets/Header.css'
 import { Link, NavLink } from 'react-router-dom'
 
@@ -9,14 +9,10 @@ import { Link, NavLink } from 'react-router-dom'
 
 function Header(){
 
-
-
     return(
-
-      
+   
 
     <Navbar  variant="lighter" expand="lg" className="NavColor" fixed='top'>
-      
       <Container>
         <img src ={ 'https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/Logos%2FAliteTr540x540.png?alt=media&token=885d97c2-b420-4087-b124-de26bfb847bf' } className= "navbar-brand" alt="logo" width ="50" />
         
@@ -49,9 +45,6 @@ function Header(){
     </Navbar>
   );
 }
-
-
-
 
 export default Header;
 
