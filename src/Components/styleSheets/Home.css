@@ -1,12 +1,31 @@
+
 .home{
+  padding: 10px;
     margin-bottom: 90px;
+    background-color: #F2F2F2;
+    border-radius: 5px;
 
    
 }
 
 .hm-title{
 text-align: center;
-margin-top: 100px;
+margin-top: 30px;
 color:cadetblue;
 text-shadow: 0 1px 0 #b8b4b4
 }
+
+
+/****** Banner image ******/
+.banner img{
+    margin: 40px auto  ;
+    padding:10px;
+    width: 70% ;
+    height: 40%;
+    padding: 50px 20px 20px 20px;
+    opacity: 0.9 !important;
+    text-align: center;
+
+    
+}
+/****** END Banner image ******/

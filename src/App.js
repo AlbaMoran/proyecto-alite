@@ -46,6 +46,7 @@ return(
         </Routes>   
     </UserAuthContextProvider>   
 </CartContext>
+            <p> {process.env.REACT_APP_VERSION}</p>
 <Footer/>
 </>
 

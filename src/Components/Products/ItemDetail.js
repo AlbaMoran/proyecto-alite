@@ -5,6 +5,7 @@ import ItemCount from './ItemCount';
 import '../../Components/styleSheets/ItemDetail.css'
 import swal from "sweetalert";
 import { Context } from '../../cartContext/CartContext';
+import Ico from '../../../src/assets/images/Logos/AliteNegro70x70.png'
 
 
 
@@ -28,10 +29,11 @@ const ItemDetail = ( {item}  ) => {
 
   return (
     <>
-  <Container className="item-detail-container container mx-auto my-6 ">
+    <div sm={6}>
+        <Container className="item-detail-container container mx-auto my-6 ">
       <Row>
         <Col sm={6} >
-          <Carousel style={{maxHeight:'300px', justifyContent: 'center', textAlign:'center'}} className='' >
+          <Carousel  >
             <Carousel.Item>
             <img className="d-block w-90 box-detail "
               src={item.image} 
@@ -57,10 +59,14 @@ const ItemDetail = ( {item}  ) => {
 
         </Col>
         <Col sm={6} className='box'> 
-              <h3>{item.name}</h3>
+             
+              <h3 > <img src={Ico} alt='ico' style={{width:'15%', marginBottom:0}} />  </h3>
+              <h3><b>{item.name}</b></h3>
+             
+              <hr/>
               <h6><b>Ingredientes:</b></h6>
               <p> {item.detail}</p>
-              <h6><b>Pertenece a la colección:</b></h6>
+              <h6><b>Pertenece a la categoría:</b></h6>
               <p> { item.categoryName  }</p>
               <p>{item.description}</p>
           
@@ -76,11 +82,9 @@ const ItemDetail = ( {item}  ) => {
               <b>Presentación:</b>
           </h6>
           <p className="item-info">{item.presentation}</p>
-       
-
+          <hr/>
           <div className="id-Stock">      
-          <br/>
-            <h6><b>Precio</b>
+           <h6><b>Precio</b>
                 <h5 > ${item.price}</h5>
             </h6>
             </div>
@@ -106,6 +110,7 @@ const ItemDetail = ( {item}  ) => {
                
             </Row>
             <Row>
+            <hr/>
             <span > {`Stock: ${item.stock} unidades`}</span>
             </Row>
           </Container>
@@ -113,6 +118,8 @@ const ItemDetail = ( {item}  ) => {
       </Row> 
     </Container>
   
+    </div>
+
    
 
       

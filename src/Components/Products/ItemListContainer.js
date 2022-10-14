@@ -6,48 +6,44 @@ import { db } from '../LoginComponents/Firebase'
 import { useParams } from 'react-router-dom';
 import '../styleSheets/itemlistcontainer.css'
 
-
-
-
 function ItemListContainer() {
   
   const [listProducts, setListProduct] = useState([]);
   const [status, setStatus] = useState(false)
   const {categoryName}= useParams()
- 
 
+  
   useEffect(() => {         
     const queryCollection = collection(db , 'products'); 
 
+    
     if (categoryName) {
 
         const queryByCategory = query(queryCollection, where('categoryName', '==', categoryName )) 
-        getDocs(queryByCategory) 
-        .then(res => setListProduct(res.docs.map(item => ({ id: item.id, ...item.data() }))),
+        getDocs(queryByCategory)
+        .then(res => 
+        setListProduct(res.docs.map(item => ({ id: item.id, ...item.data() }))),
         setStatus(true))
-
-    } else {
+    }    else {
         getDocs(queryCollection) 
         .then(res => setListProduct(res.docs.map(item => ({ id: item.id, ...item.data() }))),
         setStatus(true))  
     }
-}, [categoryName, status])
+}, [categoryName, status ])
 
 
 
   return (
 
     <div className="category-title">
-     { listProducts.length >0 ?
-     <h3 >  {categoryName} </h3>
-     : null}
 
-
-{
+    {
      status 
      ?
     <div>
-      <ItemList listProducts={listProducts} />
+     
+      <ItemList listProducts={listProducts}  />
+      
     </div>
      :
       <div  >

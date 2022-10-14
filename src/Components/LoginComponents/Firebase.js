@@ -16,7 +16,7 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth= getAuth(app);
 
-// Manejar stock --> plus
+// Manejar stock 
 export const updateStock = async (id, quantity) => {
 	const item = await getDoc(doc(db, "products", id))
 	await updateDoc(doc(db, "products", id), {

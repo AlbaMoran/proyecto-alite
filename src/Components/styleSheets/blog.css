@@ -1,6 +1,7 @@
 .title{
     margin-top: 150px;
     text-align: center;
+    
 }
 
 .carrousel {
@@ -27,12 +28,18 @@
     font-style: italic !important;
     color:rgb(246, 248, 241) !important;
     background-color:  #7FAF9E;
+
 }
 .box {
     background-color: aliceblue !important;
+    text-align: center ;
+    padding:15px;
+    
 }
 
 .box-picture{
     border-radius: 50%;
     border: 1px solid #EEDBAE;
+    padding:10px;
+   
 }

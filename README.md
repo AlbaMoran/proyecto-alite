@@ -5,11 +5,20 @@
 ### Alité - Tienda de Té 
 ![](https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/Logos%2FAliteLogo.png?alt=media&token=5b1c32d1-9b7f-47a1-9279-99419fe94279)
 >[ir al proyecto en GitHub](https://github.com/AlbaMoran/proyecto-alite)
+
 ## Owner
 Alba Morán
 
+## Logo
+The logo was designed for this project, deconstructing the complete anagram of its name Alité.
+
+## Color pallette
+Color palette was created with Adobe Color applicattion web, to keep armony durig all navigation.Ver
+[Color Pallette](https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/Others%2FAdobeColor-color%20theme_Captura%20de%20pantalla%202022-10-13%20094410.jpeg?alt=media&token=00c7824c-6cbc-4b55-b135-b503d94e2059)
+
 ## Context
 Project in context of ReactJS Course, dicted by CoderHouse, August-October 2022
+
 
 ## Features
 The app Alité is an E-commerce site where you can buy Tea leaves or bags, and other accesories. 

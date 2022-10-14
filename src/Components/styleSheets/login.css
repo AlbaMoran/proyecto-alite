@@ -2,7 +2,7 @@
 
 .box {
     margin: 110px auto;
-    border: 1px solid #EEDBAE;
+    border: 1px solid lightslategray;
     border-radius: 15px;
     max-width: 700px !important;
     justify-content: center;
