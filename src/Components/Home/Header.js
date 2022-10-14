@@ -25,7 +25,7 @@ function Header(){
             <Nav className="me-auto ">
                   <Navbar.Text className=""> <NavLink to="/" className="links "> Home</NavLink>  </Navbar.Text>
                   <Navbar.Text > <Link to="/blog" className="links">Blog</Link>      </Navbar.Text>
-                  <Navbar.Text > <Link to="/products" className="links">Tienda</Link></Navbar.Text>
+                  <Navbar.Text > <Link to="/store" className="links">Tienda</Link></Navbar.Text>
                               
                     <NavDropdown title="Categorias"  id="basic-nav-dropdown" className="links" >
                         <NavDropdown.Item ><Link to="/category/Variedades" className="userOption"> Variedades</Link></NavDropdown.Item>

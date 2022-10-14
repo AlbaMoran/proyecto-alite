@@ -44,6 +44,7 @@
 
 .item-detail-container {
     margin-top: 130px;
+    position : absolute;
 
 }
 .item-detail-container img {
@@ -64,9 +65,12 @@
         background-color: white;
         padding: 50px;
     }
+.blank{
+    background-color: white;
+}
 .carrousel-box {
     margin: auto;
-   
+
     justify-content: 'center';
     text-align:'center';
 }

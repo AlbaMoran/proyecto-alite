@@ -15,8 +15,9 @@ import Footer from './Components/Footer/Footer'
 import TermsAndConditions from './Components/TermsAndConditions/TermsAndConditions'
 import Blog from './Components/Blog/Blog'
 import ForgotPassword from './Components/LoginComponents/ForgotPassword'
-import NotFound from './Components/NotFound/NotFound'
 import Category from './Components/Products/Category';
+import Store from './Components/Store/Store'
+import NotFound from './Components/NotFound/NotFound'
 
 
 const App= ()=> {
@@ -29,7 +30,7 @@ return(
     <UserAuthContextProvider>
         <Routes>
             <Route path="/" element={<Home /> }/>
-            <Route exact path="/products" element={<Home /> }/>
+            <Route exact path="/store" element={<Store /> }/>
             <Route exact path="/blog" element={<Blog /> }/>
             <Route exact path="/cart" element={<Cart/>}/>
             <Route exact path="/order/:id" element={<OrderDetail/>}/>

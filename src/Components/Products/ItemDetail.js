@@ -29,10 +29,10 @@ const ItemDetail = ( {item}  ) => {
 
   return (
     <>
-    <div sm={6}>
+  
         <Container className="item-detail-container container mx-auto my-6 ">
       <Row>
-        <Col sm={6} >
+        <Col  >
           <Carousel  >
             <Carousel.Item>
             <img className="d-block w-90 box-detail "
@@ -82,34 +82,38 @@ const ItemDetail = ( {item}  ) => {
               <b>Presentación:</b>
           </h6>
           <p className="item-info">{item.presentation}</p>
-          <hr/>
-          <div className="id-Stock">      
-           <h6><b>Precio</b>
-                <h5 > ${item.price}</h5>
-            </h6>
-            </div>
 
-          <Container className="cart-buttons-container">
-            <Row className="add-button-container">
+
+          <Container className="cart-buttons-container ">
+            <Row className="add-button-container blank ">
+          <hr/>
+              <div className="id-Stock blank">      
+              <h6><b>Precio</b>
+                    <h5 > ${item.price}</h5>
+                </h6>
+                </div>
                 {
                  add
                   ? 
                   <Col >
                     <Row>
                     <h6> <b>¡Añadido al carrito!</b></h6>
+                
                     </Row>
                     <Row className="buy-button">
                       <Link to="/cart" >
                         <Button  variant="success" size="lg" > Finalizar compra </Button>
                       </Link>                
                     </Row>
+                    <br/>   
                   </Col>
                   : 
                   <ItemCount item= {item} stock={item.stock} initial="1" onAdd={onAdd} />
                 }  
-               
+            <br/>
             </Row>
             <Row>
+            
             <hr/>
             <span > {`Stock: ${item.stock} unidades`}</span>
             </Row>
@@ -118,7 +122,7 @@ const ItemDetail = ( {item}  ) => {
       </Row> 
     </Container>
   
-    </div>
+   
 
    
 
