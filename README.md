@@ -6,6 +6,10 @@
 ![](https://firebasestorage.googleapis.com/v0/b/alite-tea-store.appspot.com/o/Logos%2FAliteLogo.png?alt=media&token=5b1c32d1-9b7f-47a1-9279-99419fe94279)
 >[ir al proyecto en GitHub](https://github.com/AlbaMoran/proyecto-alite)
 
+## Deploy in Netlify
+>[![Netlify Status](https://api.netlify.com/api/v1/badges/c71dd81f-8916-4fa4-90a3-c8db2144a6cb/deploy-status)](https://app.netlify.com/sites/alite/deploys)
+
+
 ## Owner
 Alba Morán
 
