@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import { useParams } from 'react-router-dom';
 import ItemDetail from './ItemDetail';
-import {db} from "../LoginComponents/Firebase";
+import {db} from "../Firebase/Firebase";
 import { getDoc,  doc} from 'firebase/firestore';
 
 

@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import { Container, Row, Col } from 'react-bootstrap';
 import {  doc, getDoc } from 'firebase/firestore';
-import { db } from '../LoginComponents/Firebase';
+import { db } from '../Firebase/Firebase';
 import "../styleSheets/orderDetail.css";
 
 

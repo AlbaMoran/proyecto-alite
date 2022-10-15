@@ -28,7 +28,7 @@
     margin-bottom: 10px;
 }
 .id-Img:hover {
-    border: 2px solid rgb(42, 110, 165);
+    border: 2px solid #2a6ea5;
    
 }
 
@@ -44,6 +44,7 @@
 
 .item-detail-container {
     margin-top: 130px;
+    position : absolute;
 
 }
 .item-detail-container img {
@@ -55,14 +56,27 @@
 }
 .box-detail{
 
-        margin: 110px auto;
+        margin: 70px auto;
         border: 1px solid lightslategray;
         border-radius: 15px;
-        max-width: 700px !important;
+        max-width: 600px !important;
         justify-content: center;
         text-align: center;
-        background-color: lavender;
-        padding: 35px;
+        background-color: white;
+        padding: 50px;
     }
-    
+.blank{
+    background-color: white;
+}
+.carrousel-box {
+    margin: auto;
 
+    justify-content: 'center';
+    text-align:'center';
+}
+div.detail-logo  {
+    margin-top:7px;
+   display: flex;
+   
+   
+}

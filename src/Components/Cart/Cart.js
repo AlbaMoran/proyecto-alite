@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import { Button, Container, Row, Col, Table } from 'react-bootstrap'
 import '../styleSheets/cart.css'
 import { addDoc, collection, serverTimestamp } from 'firebase/firestore'
-import { db, updateStock } from '../LoginComponents/Firebase'
+import { db, updateStock } from '../Firebase/Firebase'
 import swal from "sweetalert";
 import CartWidget from '../CartWidget/CartWidget'
 
@@ -16,6 +16,7 @@ const Cart = ({ nameId }) => {
     const [buyer, setBuyer] = useState({ name: '', email: '', phone: '' })
 
     const [orderStatus, setOrderStatus] = useState(false)
+
     const [orderId, setOrderId] = useState("");
 
 
@@ -31,6 +32,7 @@ const Cart = ({ nameId }) => {
     }
 
     const clickPurchase = async (order) => {
+       
         const newOrder = await addDoc(collection(db, "orders"), { ...order, date: serverTimestamp() })
         return newOrder
 
@@ -83,14 +85,12 @@ const Cart = ({ nameId }) => {
                               
                               <Link to={`/order/${orderId}`}>
                                     <Button variant="dark" size="md" className="m-2">
-                                      {" "}
-                                      Ver detalle
+                                       Ver detalle
                                     </Button>
                               </Link>
                               <Link to="/">
                                     <Button variant="dark" size="md"  className="m-2">
-                                      {" "}
-                                      Seguir comprando
+                                        Seguir comprando
                                     </Button>
                               </Link>
                           </Container>

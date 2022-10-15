@@ -3,12 +3,12 @@ import { getAuth } from "firebase/auth";
 import { getFirestore, getDoc, updateDoc, doc} from 'firebase/firestore';
 
 const firebaseConfig = {
-  apiKey: "AIzaSyAIfqu6I1Aqeq3J6jrtM0po_SCFTrGwx4o",
-  authDomain: "alite-tea-store.firebaseapp.com",
-  projectId: "alite-tea-store",
-  storageBucket: "alite-tea-store.appspot.com",
-  messagingSenderId: "699434909884",
-  appId: "1:699434909884:web:86ad38e0036c81bccd50b9"
+  apiKey: process.env.REACT_APP_APIKEY,
+  authDomain: process.env.REACT_APP_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_PROJECTID,
+  storageBucket: process.env.REACT_APP_STORAGEBUCKET,
+  messagingSenderId: process.env.REACT_APP_MESSAGINGSENDERID,
+  appId: process.env.REACT_APP_APPID,
 };
 
 
@@ -16,7 +16,7 @@ const app = initializeApp(firebaseConfig);
 export const db = getFirestore(app);
 export const auth= getAuth(app);
 
-// Manejar stock --> plus
+// Manejar stock 
 export const updateStock = async (id, quantity) => {
 	const item = await getDoc(doc(db, "products", id))
 	await updateDoc(doc(db, "products", id), {

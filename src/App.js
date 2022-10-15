@@ -15,9 +15,10 @@ import Footer from './Components/Footer/Footer'
 import TermsAndConditions from './Components/TermsAndConditions/TermsAndConditions'
 import Blog from './Components/Blog/Blog'
 import ForgotPassword from './Components/LoginComponents/ForgotPassword'
+//import Category from './Components/Products/Category';
+import Store from './Components/Store/Store'
 import NotFound from './Components/NotFound/NotFound'
-import Category from './Components/Products/Category';
-
+import ItemListContainer from './Components/Products/ItemListContainer'
 
 const App= ()=> {
 return(
@@ -29,12 +30,12 @@ return(
     <UserAuthContextProvider>
         <Routes>
             <Route path="/" element={<Home /> }/>
-            <Route exact path="/products" element={<Home /> }/>
+            <Route exact path="/store" element={<Store /> }/>
             <Route exact path="/blog" element={<Blog /> }/>
             <Route exact path="/cart" element={<Cart/>}/>
             <Route exact path="/order/:id" element={<OrderDetail/>}/>
             <Route exact path="/item/:id" element={<ItemDetailContainer/> }/>
-            <Route exact path="/category/:categoryName" element={<Category/>}/>
+            <Route exact path="/category/:categoryName" element={<ItemListContainer/>}/>
      
             <Route exact path="/login" element={<Login/>}/>
             <Route exact path="/reestablecerpassword" element={<ForgotPassword/>}/>
@@ -46,6 +47,7 @@ return(
         </Routes>   
     </UserAuthContextProvider>   
 </CartContext>
+            <p> {process.env.REACT_APP_VERSION}</p>
 <Footer/>
 </>
 

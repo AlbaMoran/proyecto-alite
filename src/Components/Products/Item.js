@@ -3,11 +3,10 @@ import { Accordion, Card } from "react-bootstrap";
 import { Link } from 'react-router-dom';
 import "../../Components/styleSheets/Item.css";
 import '../styleSheets/Item.css'
+import Ico from '../../../src/assets/images/Logos/Alite.ico'
 
 
-
-const Item = ({ item }) => {
-
+const Item = ( { item } ) => {
   
   return (
     <>
@@ -26,7 +25,12 @@ const Item = ({ item }) => {
         key={item.id}
       >
         <Card.Body>
-          <Card.Img variant="top" src={item.image} alt={item.name} style={{ width: "70%", userSelect: "none" }}
+          <div style={{textAlign:'start'}}>
+            <img src={Ico} alt='ico' />
+            <br/>
+
+          </div>
+         <Card.Img variant="top" src={item.image} alt={item.name} style={{ width: "70%", userSelect: "none" }}
           />
           <h6 className="card-text">{item.categoryName}</h6>
           <div
