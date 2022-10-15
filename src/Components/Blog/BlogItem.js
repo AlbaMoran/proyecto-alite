@@ -7,7 +7,7 @@ const BlogItem = (props) => {
 
   return (
     <>
-      <Container className="box" style={{ width: '25rem' }}>
+      <Container className="box" style={{ width: '22rem' }}>
         <img src={props.icon} alt={props.icon} className="box-picture" style={{ width: '50%' }} /><hr />
         <p className="title-item">
           <b> {props.name}</b>

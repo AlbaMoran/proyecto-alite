@@ -48,8 +48,8 @@
 
 }
 .item-detail-container img {
-   max-height: 500px;
-   max-width: 70%;
+   max-height: 90vw;
+   max-width: 95vw;
    margin-Bottom: 20px;
    padding-bottom: 25px;
 
@@ -59,7 +59,7 @@
         margin: 70px auto;
         border: 1px solid lightslategray;
         border-radius: 15px;
-        max-width: 600px !important;
+        max-width: 85vw !important;
         justify-content: center;
         text-align: center;
         background-color: white;
