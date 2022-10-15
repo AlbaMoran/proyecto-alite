@@ -8,7 +8,8 @@ import { useState } from 'react'
  function CartContext({children}){
 
     const [cart, setCart] = useState([])
-    
+  
+  
     const clearCart = ()  => {  setCart([]) }
   
     const isInCart = (id) => cart.find((product) => product.id === id ) ? true : false
@@ -27,9 +28,6 @@ import { useState } from 'react'
             setCart([...cart, {...item, quantity: quantity}])
         }}
     
- 
-  
-
     const totalPrice = () => {
         return Number(cart.reduce((acumulator, product)  => acumulator + product.quantity * product.price, 0))
     }

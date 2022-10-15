@@ -6,7 +6,7 @@ import { createUserWithEmailAndPassword,
         GoogleAuthProvider, 
         signInWithPopup,
         sendPasswordResetEmail} from 'firebase/auth';
-import { auth } from "../LoginComponents/Firebase"
+import { auth } from "../Firebase/Firebase"
 
 
 const userAuthContext = createContext();
