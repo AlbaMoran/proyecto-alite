@@ -96,10 +96,10 @@ const ItemDetail = ({ item }) => {
               <Row className="add-button-container blank ">
                 <hr />
                 <div className="id-Stock blank">
-                  <h6>
+                  <h5>
                     <b>Precio</b>
-                    <h5 > ${item.price}</h5>
-                  </h6>
+                    <h6 > ${item.price}</h6>
+                  </h5>
                 </div>
                 {
                   add
