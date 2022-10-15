@@ -36,8 +36,8 @@ const ItemDetail = ({ item }) => {
   return (
     <>
 
-      <Container className="item-detail-container container mx-auto my-6 ">
-        <Row>
+      <Container className="item-detail-container mx-auto my-6 ">
+        <Row style={{ width: '95vw'}}>
           <Col  >
             <Carousel  >
               <Carousel.Item>
