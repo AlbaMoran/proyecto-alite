@@ -7,8 +7,7 @@
 >[ir al proyecto en GitHub](https://github.com/AlbaMoran/proyecto-alite)
 
 ## Deploy in Netlify
->[![Netlify Status](https://api.netlify.com/api/v1/badges/c71dd81f-8916-4fa4-90a3-c8db2144a6cb/deploy-status)](https://app.netlify.com/sites/alite/deploys)
-
+>[![Netlify Status](https://api.netlify.com/api/v1/badges/6ea54d36-a427-48ea-82b0-a9277a3f4f0f/deploy-status)](https://app.netlify.com/sites/alite/deploys)
 
 ## Owner
 Alba Morán
