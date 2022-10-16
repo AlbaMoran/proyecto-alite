@@ -35,12 +35,12 @@ const ItemDetail = ({ item }) => {
 
   return (
     <>
-
-      <Container className="item-detail-container mx-auto my-6 ">
+<div style={{ justifyContent:'center'}}>
+      <Container className="item-detail-container container mx-auto my-6 " >
         <Row style={{ width: '95vw'}}>
           <Col  >
             <Carousel  >
-              <Carousel.Item>
+              <Carousel.Item >
                 <img className="d-block w-90 box-detail "
                   src={item.image}
                   alt={item.name}
@@ -60,11 +60,9 @@ const ItemDetail = ({ item }) => {
                 />
               </Carousel.Item>
             </Carousel>
-
-
-
           </Col>
-          <Col sm={6} className='box'>
+
+          <Col sm={6} className='box' style={{ width: '95vw'}}>
 
             <h3 > <img src={Ico} alt='ico' style={{ width: '15%', marginBottom: 0 }} />  </h3>
             <h3><b>{item.name}</b></h3>
@@ -131,7 +129,7 @@ const ItemDetail = ({ item }) => {
         </Row>
       </Container>
 
-
+</div>
 
 
 
