@@ -1,3 +1,5 @@
+@import url(Banner.css);
+
 
 .home{
   padding: 10px;
@@ -18,15 +20,5 @@ border-bottom: 1px solid #f4f4f4;
 
 
 /****** Banner image ******/
-.banner img{
-    margin: 20px auto  ;
-    padding:10px;
-    width: 95% ;
-    height:70vw;
-    padding: 50px 20px 20px 20px;
-    opacity: 0.9 !important;
-    text-align: center;
 
-    
-}
 /****** END Banner image ******/

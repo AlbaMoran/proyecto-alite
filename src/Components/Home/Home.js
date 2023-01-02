@@ -11,7 +11,7 @@ function Home  ( ) {
     return (
        
        <> 
-        <div className='banner' style={{textAlign:'center'}}>
+        <div className='' style={{textAlign:'center', marginTop:'100px'}}>
             <Banner/>
         </div> 
 

@@ -1,7 +1,8 @@
-
+@import url(../src/Components/styleSheets/Home.css);;
 
 .App {
   text-align: center;
+  margin-top: 150px;
 
 }
 
